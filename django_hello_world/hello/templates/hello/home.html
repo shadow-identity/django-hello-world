@@ -6,3 +6,17 @@
 <p>You can now go to <a href="{% url admin:index %}">admin interface</a> and change admin pasword</p>
 <p>Currently next users are registered: {% for user in users %}{{ user.username }} {% endfor %}</p>
 {% endblock content %}
+
+{% block contact_table %}
+<h3>42 Coffee Cups Test Assignment</h3>
+<table width="800" cellspacing="10" cols="4">
+    <tbody valign="top">
+    <tr><td width="10px">Name</td><td>{{ name }}</td><td colspan="2">Contacts</td></tr>
+    <tr><td>Last Name</td><td>{{ surname }}</td><td width="10px">Email</td><td>{{ email }}</td></tr>
+    <tr><td rowspan="2">Date of birth</td><td rowspan="2">{{ date_of_birth}}</td><td>Jabber</td><td>{{ jabber }}</td></tr>
+    <tr><td>Skype</td><td>{{ skype }}</td></tr>
+    <tr><td colspan="2">Bio:</td><td>Other contacts</td></tr>
+    <tr><td colspan="2" width="50%">{{ bio }}</td><td colspan="2" width="50%">{{ other_contacts }}</td></tr>
+    </tbody>
+</table>
+{% endblock contact_table %}

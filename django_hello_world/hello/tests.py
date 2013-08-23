@@ -11,8 +11,9 @@ from django.test.client import Client
 
 
 class HttpTest(TestCase):
-    def test_home(self):
+    fixtures = ['hello/fixtures/dump.json']
+    def test_hello(self):
         c = Client()
         response = c.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Name')
+        self.assertContains(response, 'Pavel')
