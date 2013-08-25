@@ -26,9 +26,22 @@ class HttpTest(TestCase):
 class MiddlewareTest(TestCase):
     fixtures = ['hello/fixtures/dump.json']
 
+    def setUp(self):
+        self.c = Client()
+        self.rnd = str(random())
+
     def test_save_request_to_db(self):
-        c = Client()
-        rnd = str(random())
-        c.post('/', {'random': rnd})
-        data_from_db = Requests.objects.reverse()[1].req
-        self.assertTrue(rnd in data_from_db)
+        """ Test that we really save requests to db
+        """
+        self.c.post('/', {'random': self.rnd})
+        data_from_db = Requests.objects.reverse()[0].req
+        self.assertTrue(self.rnd in data_from_db)
+
+    def test_last_10_records_show(self):
+        """ Test that we get 10 last records with requests on /requests page
+        """
+        response = self.c.post(reverse('requests'))
+        text = ''
+        for record in Requests.objects.reverse()[:10]:
+            text = record.req
+        self.assertTrue(response.content, text)
