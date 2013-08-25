@@ -1,12 +1,17 @@
-{% extends "base.html" %}
-
-{% block requests %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Requests</title>
+</head>
+<body>
 <h3>Latest 10 requests</h3>
 
 <ul>
-{%  comment %}  {% for request in request_list %}
-    <li> {{ request }} </li>
-{% endfor %} {% endcomment %}
+{% for request in request_list %}
+    <hr>{{ request }}
+{% endfor %}
 
 </ul>
-{% endblock requests %}
+
+</body>
+</html>

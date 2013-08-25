@@ -22,7 +22,7 @@ def home(request):
             'date_of_birth': record.date_of_birth,
     }
 
-
+@render_to('hello/requests.html')
 def requests(request):
-
-    return {'': '',}
+    request_list = [req.req for req in Requests.objects.reverse()[:10]]
+    return {'request_list': request_list,}
