@@ -45,3 +45,17 @@ class MiddlewareTest(TestCase):
         for record in Requests.objects.reverse()[:10]:
             text = record.req
         self.assertTrue(response.content, text)
+
+
+class ContextProcessorTest(TestCase):
+    def test_django_settings(self):
+        from django.template import RequestContext
+        from django.test.client import RequestFactory
+        from django.conf import settings
+        from hello.context_processors import django_settings
+
+        factory = RequestFactory()
+        request = factory.get('/')
+        c = RequestContext(request, {'foo': 'bar'}, [django_settings])
+        self.assertTrue('settings' in c)
+        self.assertEquals(c['settings'], settings)
