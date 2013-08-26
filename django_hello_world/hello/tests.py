@@ -51,11 +51,12 @@ class ContextProcessorTest(TestCase):
     def test_django_settings(self):
         from django.template import RequestContext
         from django.test.client import RequestFactory
-        from django.conf import settings
-        from hello.context_processors import django_settings
+        from hello.context_processors import django_settings, get_settings_dict
 
         factory = RequestFactory()
         request = factory.get('/')
-        c = RequestContext(request, {'foo': 'bar'}, [django_settings])
-        self.assertTrue('settings' in c)
-        self.assertEquals(c['settings'], settings)
+        RequestContext(request, [django_settings])
+
+        settings = get_settings_dict()
+        for setting in settings:
+            self.assertEqual(RequestContext(request).get(setting), settings[setting])
