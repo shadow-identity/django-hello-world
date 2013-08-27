@@ -36,7 +36,7 @@ def requests(request):
 def form(request):
 
     item = get_object_or_404(Contact, id=1)
-    form = ContactForm(request.POST or None, instance=item)
+    form = ContactForm(request.POST or None, request.FILES or None,  instance=item)
 
     if request.method == 'POST': # If the form has been submitted...
         if form.is_valid(): # All validation rules pass
@@ -48,19 +48,3 @@ def form(request):
         'form': form,
     })
 
-    #form = get_object_or_404(Requests)
-    """try:
-        selected_choice = p.choice_set.get(pk=request.POST['choice'])
-    except (KeyError, Choice.DoesNotExist):
-        # Redisplay the poll voting form.
-        return render(request, 'polls/detail.html', {
-            'poll': p,
-            'error_message': "You didn't select a choice.",
-        })
-    else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))"""
