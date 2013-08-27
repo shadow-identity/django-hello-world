@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # url(r'^django_hello_world/', include('django_hello_world.foo.urls')),
 
     url(r'last_requests/', 'django_hello_world.hello.views.requests', name='requests'),
+    url(r'form/', 'django_hello_world.hello.views.form', name='form'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

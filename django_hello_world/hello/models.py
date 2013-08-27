@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.forms import ModelForm
 # Create your models here.
 
 
@@ -12,6 +12,7 @@ class Contact(models.Model):
     skype = models.CharField(max_length=100, default='john_smith')
     jabber = models.CharField(max_length=100, default='jabber@example.com')
     other_contacts = models.TextField(default='')
+    photo = models.ImageField(upload_to='photos')
 
 
 class Requests(models.Model):
@@ -19,3 +20,9 @@ class Requests(models.Model):
 
     class Meta():
         ordering = ['id']
+
+
+class ContactForm(ModelForm):
+
+    class Meta:
+        model = Contact

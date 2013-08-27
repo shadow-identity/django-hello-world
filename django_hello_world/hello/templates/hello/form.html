@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact form</title>
+</head>
+<body>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<h3>42 Coffee Cups Test Assignment</h3>
+<form action="." method="post" enctype="multipart/form-data">
+{% csrf_token %} {{ form.non_field_errors }}
+
+<table width="800" cellspacing="10" cols="4">
+    <tbody valign="top">
+    <tr><td align="right" width="10px" width="50px">Name:</td>
+        <td width="35%"><div class="fieldWrapper"> <label for="name"></label> {{ form.name }} </div></td>
+        <td width="10px" align="right">Email:</td>
+        <td width="35%"><div class="fieldWrapper"> <label for="email"></label> {{ form.email }} </div></td></tr>
+    <tr><td align="right">Last Name:</td>
+        <td><div class="fieldWrapper"> <label for="surname"></label> {{ form.surname }} </div></td>
+        <td width="10px" align="right">Jabber:</td>
+        <td><div class="fieldWrapper"> <label for="jabber"></label> {{ form.jabber }} </div></td></tr>
+    <tr><td align="right">Date of birth:</td>
+        <td><div class="fieldWrapper"> <label for="date_of_birth"></label> {{ form.date_of_birth }} </div></td>
+        <td align="right">Skype:</td>
+        <td><div class="fieldWrapper"> <label for="skype"></label> {{ form.skype}} </div></td>
+    <tr><td rowspan="1" align="right">Photo:</td>
+        <td rowspan="1"><div class="fieldWrapper"> <label for="photo"></label> {{ form.photo}} </div></td>
+        <td colspan="2" valign="bottom">Other contacts:</td></tr>
+    <tr><td rowspan="4" colspan="2"><img src="URL" whdth="90%"></td>
+        <td colspan="2"><div class="fieldWrapper"> <label for="other_contacts"></label> {{ form.other_contacts}} </div></td></tr>
+    <tr><td colspan="2">Bio:</td>
+    <tr><td colspan="2"><div class="fieldWrapper"> <label for="bio"></label> {{ form.bio}} </div></td></tr>
+    </tbody>
+</table>
+
+
+<p><input type="submit" value="Save" />   <a href="/">Cancel</a></p>
+</form>
+
+<hr align="left">
+<a href="/last_requests">requests</a>
+
+</body>
+</html>
