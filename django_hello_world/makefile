@@ -7,7 +7,6 @@ activate: ../requirements.txt
 dump:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata hello hello > hello/fixtures/dump.json
 
-
 full_test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test
 

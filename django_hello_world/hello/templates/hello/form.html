@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact form</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -43,5 +40,4 @@
 <hr align="left">
 <a href="/last_requests">requests</a>
 
-</body>
-</html>
+{% endblock %}

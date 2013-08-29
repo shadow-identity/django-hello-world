@@ -1,19 +1,17 @@
 from annoying.decorators import render_to
 from django.contrib.auth.models import User
-from hello.models import Requests, ContactForm, Contact
-
+from django.contrib.auth.decorators import login_required
+from django_hello_world.hello.models import Requests, ContactForm, Contact
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect, HttpResponse
-from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
 
 
 @render_to('hello/home.html')
 def home(request):
     users = User.objects.filter()
 
-    #TODO: remove it
     record = Contact.objects.get(pk=1)
-
     return {'users': users,
             'name': record.name,
             'surname': record.surname,
@@ -32,6 +30,7 @@ def requests(request):
     request_list = [req.req for req in Requests.objects.reverse()[:10]]
     return {'request_list': request_list}
 
+@login_required
 #@render_to('hello/form.html')
 def form(request):
 
@@ -48,3 +47,6 @@ def form(request):
         'form': form,
     })
 
+
+def login(request):
+    return render_to_response('login.html')
