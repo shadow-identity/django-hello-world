@@ -10,7 +10,7 @@ from django.test import TestCase
 from django.test.client import Client
 
 from random import random
-from hello.models import Requests
+from django_hello_world.hello.models import Requests
 
 
 class HttpTest(TestCase):
@@ -46,12 +46,19 @@ class MiddlewareTest(TestCase):
             text = record.req
         self.assertTrue(response.content, text)
 
+    def test_limit_requests(self):
+        """ Test that we limit Requests table by 15 records
+        """
+        for i in range(0, 15):
+            self.c.get('/')
+        self.assertTrue(Requests.objects.count() < 15)
+
 
 class ContextProcessorTest(TestCase):
     def test_django_settings(self):
         from django.template import RequestContext
         from django.test.client import RequestFactory
-        from hello.context_processors import django_settings, get_settings_dict
+        from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 
         factory = RequestFactory()
         request = factory.get('/')

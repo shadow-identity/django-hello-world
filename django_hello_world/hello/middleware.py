@@ -1,4 +1,4 @@
-from hello.models import Requests
+from django_hello_world.hello.models import Requests
 
 
 class HelloMiddlewares(object):

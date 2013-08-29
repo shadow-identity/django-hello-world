@@ -1,4 +1,4 @@
 from django.contrib import admin
-from hello.models import Contact
+from django_hello_world.hello.models import Contact
 
 admin.site.register(Contact)

@@ -161,5 +161,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.contrib.messages.context_processors.messages",
     # custom
-    "hello.context_processors.django_settings"
+    "django_hello_world.hello.context_processors.django_settings"
     )
