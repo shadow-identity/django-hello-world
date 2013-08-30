@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+{%  load static %}
 <table width="800" cellspacing="10" cols="4">
     <tbody valign="top">
     <tr><td colspan="2"><h3>42 Coffee Cups Test Assignment</h3></td><td align="right" colspan="2" valign="middle"><a href="{% url 'login' %}">Login</a></td></tr>
@@ -8,12 +9,11 @@
     <tr><td>Last Name</td><td>{{ surname }}</td><td width="10px">Email</td><td>{{ email }}</td></tr>
     <tr><td rowspan="2">Date of birth</td><td rowspan="2">{{ date_of_birth}}</td><td>Jabber</td><td>{{ jabber }}</td></tr>
     <tr><td>Skype</td><td>{{ skype }}</td></tr>
-    <tr><td rowspan="4" colspan="2">Photo:<br><img src="{{ photo }}" whdth="90%"></td><td>Other contacts</td></tr>
+    <tr><td rowspan="4" colspan="2">Photo:<br><img src="{{ photo.url }}" whdth="80%"></td><td>Other contacts</td></tr>
     <tr><td colspan="2">{{ other_contacts }}</td></tr>
     <tr><td colspan="2">Bio:</td></tr>
     <tr><td colspan="2">{{ bio }}</td>
     </tbody>
-<img src="/media/photos/nZbp4-ilB9c.jpg" whdth="90%">
 </table>
 <hr align="left">
 <a href="/last_requests">requests</a>

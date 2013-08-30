@@ -44,7 +44,7 @@ def form(request):
             return HttpResponseRedirect('/') # Redirect after POST
 
     return render(request, 'hello/form.html', {
-        'form': form,
+        'form': form, 'photo': Contact.objects.get(pk=1).photo
     })
 
 

@@ -22,14 +22,14 @@
     <tr><td align="right">Date of birth:</td>
         <td><div class="fieldWrapper"> <label for="date_of_birth"></label> {{ form.date_of_birth }} </div></td>
         <td align="right">Skype:</td>
-        <td><div class="fieldWrapper"> <label for="skype"></label> {{ form.skype}} </div></td>
+        <td><div class="fieldWrapper"> <label for="skype"></label> {{ form.skype }} </div></td>
     <tr><td rowspan="1" align="right">Photo:</td>
-        <td rowspan="1"><div class="fieldWrapper"> <label for="photo"></label> {{ form.photo}} </div></td>
+        <td rowspan="1"><div class="fieldWrapper"> <label for="photo"></label> {{ form.photo }} </div></td>
         <td colspan="2" valign="bottom">Other contacts:</td></tr>
-    <tr><td rowspan="4" colspan="2"><img src="URL" whdth="90%"></td>
-        <td colspan="2"><div class="fieldWrapper"> <label for="other_contacts"></label> {{ form.other_contacts}} </div></td></tr>
+    <tr><td rowspan="4" colspan="2"><img src="{{ photo.url }}" whdth="90%"></td>
+        <td colspan="2"><div class="fieldWrapper"> <label for="other_contacts"></label> {{ form.other_contacts }} </div></td></tr>
     <tr><td colspan="2">Bio:</td>
-    <tr><td colspan="2"><div class="fieldWrapper"> <label for="bio"></label> {{ form.bio}} </div></td></tr>
+    <tr><td colspan="2"><div class="fieldWrapper"> <label for="bio"></label> {{ form.bio }} </div></td></tr>
     </tbody>
 </table>
 
