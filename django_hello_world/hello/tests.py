@@ -51,7 +51,7 @@ class MiddlewareTest(TestCase):
         """
         for i in range(0, 15):
             self.c.get('/')
-        self.assertTrue(Requests.objects.count() < 15)
+        self.assertTrue(Requests.objects.count() <= 15)
 
 
 class ContextProcessorTest(TestCase):
