@@ -99,7 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'hello.middleware.HelloMiddlewares',
+    'django_hello_world.hello.middleware.HelloMiddlewares',
 )
 
 ROOT_URLCONF = 'django_hello_world.urls'
