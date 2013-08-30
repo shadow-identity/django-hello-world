@@ -5,7 +5,7 @@ activate: ../requirements.txt
 	. ~/progs/venv/django-hello-world/bin/activate; pip install -Ur ../requirements.txt
 
 dump:
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata hello hello > hello/fixtures/dump.json
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata > hello/fixtures/dump.json
 
 full_test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test
@@ -18,7 +18,7 @@ test: dump
 shell: venv
 	. ~/progs/venv/django-hello-world/bin/activate; ipython manage.py shell
 
-run: venv
+run:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py runserver
 
 south:
