@@ -1,10 +1,9 @@
 from django.conf.urls import patterns, include, url
-import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django_hello_world.settings import MEDIA_ROOT
-
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from django.views.generic import TemplateView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -19,6 +18,7 @@ urlpatterns = patterns('',
         'document_root': MEDIA_ROOT,
         }),
     url(r'accounts/login/', 'django.contrib.auth.views.login', {'template_name': 'hello/login.html'}, name='login'),
+    url(r'^success/', TemplateView.as_view(template_name='hello/success.html'), name="contact_success"),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -37,11 +37,14 @@ def form(request):
     item = get_object_or_404(Contact, id=1)
     form = ContactForm(request.POST or None, request.FILES or None,  instance=item)
 
-    if request.method == 'POST': # If the form has been submitted...
-        if form.is_valid(): # All validation rules pass
+    if request.method == 'POST':
+        if form.is_valid():
             # Process the data in form.cleaned_data
             form.save()
-            return HttpResponseRedirect('/') # Redirect after POST
+            if request.is_ajax():
+                return render(request, '/success')
+            else:
+                return HttpResponseRedirect('/success/')
 
     return render(request, 'hello/form.html', {
         'form': form, 'photo': Contact.objects.get(pk=1).photo
