@@ -39,10 +39,16 @@ def form(request):
 
     if request.method == 'POST':
         if form.is_valid():
+
+
             # Process the data in form.cleaned_data
             form.save()
             if request.is_ajax():
-                return render(request, '/success')
+                #if getattr(settings, 'DEBUG', False): # only if DEBUG=True
+                import time
+                time.sleep(2)  # delay AJAX response for 5 seconds
+                return render(request, '/success/')
+
             else:
                 return HttpResponseRedirect('/success/')
 

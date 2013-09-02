@@ -10,7 +10,7 @@ from django.test import TestCase
 from django.test.client import Client
 
 from random import random
-from django_hello_world.hello.models import Requests
+from django_hello_world.hello.models import Requests, Contact
 import os
 
 if os.getcwd().rpartition('/')[2] == 'django_hello_world':
@@ -37,6 +37,15 @@ class MiddlewareTest(TestCase):
     def setUp(self):
         self.c = Client()
         self.rnd = str(random())
+        self.valid_form = {'name': self.rnd,
+                           'surname': 'b',
+                           'email': 'a@c.com',
+                           'jabber': 'b@c.com',
+                           'date_of_birth': '1985-02-17',
+                           'skype': 'lksdl',
+                           'photo': 'dlskf',
+                           'other_contacts': 'd',
+                           'bio': 'd'}
 
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
@@ -61,6 +70,22 @@ class MiddlewareTest(TestCase):
             self.c.get('/')
         self.assertTrue(Requests.objects.count() <= 15)
 
+    def test_not_logged(self):
+        """ Test that correct form without authentication = redirect to login page
+        """
+        response = self.c.post(reverse('form'), self.valid_form, follow=True)
+        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # not in base
+        self.assertEqual(response.redirect_chain[0][1], 302)  # it was redirect
+        self.assertEqual(response.status_code, 200)  # and it was ok
+        self.assertTrue(reverse('login') in response.redirect_chain[0][0])  # and to right destination
+
+    def test_login_and_save_correst(self):
+        self.c.login(username='admin', password='admin')
+        response = self.c.post(reverse('form'), self.valid_form, follow=True)
+        self.assertTrue(Contact.objects.filter(name=self.rnd).exists())  # rnd in base
+        self.assertContains(response, 'Success')
+
+    #TODO: empty field; invalid value;
 
 class ContextProcessorTest(TestCase):
     def test_django_settings(self):
