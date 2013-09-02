@@ -79,13 +79,33 @@ class MiddlewareTest(TestCase):
         self.assertEqual(response.status_code, 200)  # and it was ok
         self.assertTrue(reverse('login') in response.redirect_chain[0][0])  # and to right destination
 
-    def test_login_and_save_correst(self):
+    def test_login_and_save_correct(self):
+        """ Test that correct data saved and redirect to Success page
+        """
         self.c.login(username='admin', password='admin')
         response = self.c.post(reverse('form'), self.valid_form, follow=True)
         self.assertTrue(Contact.objects.filter(name=self.rnd).exists())  # rnd in base
         self.assertContains(response, 'Success')
 
-    #TODO: empty field; invalid value;
+    #TODO: invalid value;
+    def test_login_and_save_invalid(self):
+        """ Test that incorrect data don't saved and reported to user
+        """
+        self.c.login(username='admin', password='admin')
+        self.valid_form['email'] = 'blablabla'
+        response = self.c.post(reverse('form'), self.valid_form)
+        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
+        self.assertContains(response, 'Enter a valid e-mail address')
+
+    def test_save_empty(self):
+        """ Test that empty field data don't saved and reported to user
+        """
+        self.c.login(username='admin', password='admin')
+        self.valid_form['email'] = ''
+        response = self.c.post(reverse('form'), self.valid_form)
+        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
+        self.assertContains(response, 'This field is required')
+
 
 class ContextProcessorTest(TestCase):
     def test_django_settings(self):

@@ -39,14 +39,14 @@ def form(request):
 
     if request.method == 'POST':
         if form.is_valid():
-
-
-            # Process the data in form.cleaned_data
+            #todo: Process the data in form.cleaned_data
             form.save()
             if request.is_ajax():
                 #if getattr(settings, 'DEBUG', False): # only if DEBUG=True
+                #todo: remove freeze
                 import time
                 time.sleep(2)  # delay AJAX response for 5 seconds
+                #todo: redirect fix
                 return render(request, '/success/')
 
             else:
