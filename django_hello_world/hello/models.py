@@ -8,9 +8,9 @@ class Contact(models.Model):
     surname = models.CharField(max_length=200)
     date_of_birth = models.DateField('Date of birth')
     bio = models.TextField()
-    email = models.CharField(max_length=100, default='mail@example.com')
+    email = models.EmailField(max_length=100, default='mail@example.com')
     skype = models.CharField(max_length=100, default='john_smith')
-    jabber = models.CharField(max_length=100, default='jabber@example.com')
+    jabber = models.EmailField(max_length=100, default='jabber@example.com')
     other_contacts = models.TextField(default='')
     photo = models.ImageField(upload_to='photos')
 

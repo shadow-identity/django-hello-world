@@ -23,5 +23,5 @@ run:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py runserver
 
 south:
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py schemamigration $1 --auto
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate $1
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py schemamigration hello --auto
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello

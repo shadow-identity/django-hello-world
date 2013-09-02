@@ -87,7 +87,6 @@ class MiddlewareTest(TestCase):
         self.assertTrue(Contact.objects.filter(name=self.rnd).exists())  # rnd in base
         self.assertContains(response, 'Success')
 
-    #TODO: invalid value;
     def test_login_and_save_invalid(self):
         """ Test that incorrect data don't saved and reported to user
         """
@@ -95,7 +94,7 @@ class MiddlewareTest(TestCase):
         self.valid_form['email'] = 'blablabla'
         response = self.c.post(reverse('form'), self.valid_form)
         self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
-        self.assertContains(response, 'Enter a valid e-mail address')
+        self.assertContains(response, 'Enter a valid email address.')
 
     def test_save_empty(self):
         """ Test that empty field data don't saved and reported to user

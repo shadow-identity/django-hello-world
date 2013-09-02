@@ -36,18 +36,25 @@ def form(request):
 
     item = get_object_or_404(Contact, id=1)
     form = ContactForm(request.POST or None, request.FILES or None,  instance=item)
-
     if request.method == 'POST':
         if form.is_valid():
-            #todo: Process the data in form.cleaned_data
-            form.save()
+            item.name = form.cleaned_data['name']
+            item.surname = form.cleaned_data['surname']
+            item.email = form.cleaned_data['email']
+            item.skype = form.cleaned_data['skype']
+            item.jabber = form.cleaned_data['jabber']
+            item.date_of_birth = form.cleaned_data['date_of_birth']
+            item.bio = form.cleaned_data['bio']
+            item.other_contacts = form.cleaned_data['other_contacts']
+
+            item.save()
             if request.is_ajax():
                 #if getattr(settings, 'DEBUG', False): # only if DEBUG=True
                 #todo: remove freeze
                 import time
                 time.sleep(2)  # delay AJAX response for 5 seconds
                 #todo: redirect fix
-                return render(request, '/success/')
+                return HttpResponseRedirect('/success/')
 
             else:
                 return HttpResponseRedirect('/success/')
