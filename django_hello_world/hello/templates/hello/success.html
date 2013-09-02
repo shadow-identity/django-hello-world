@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Success</h3>
-<p>Thank you, your form was saved.</p>
-<p><a href={% url 'home' %}>Back to homepage</a></p>
+<div id="ajaxwrapper">
+    <h3>Success</h3>
+    <p>Thank you, your form was saved.</p>
+    <p><a href="{% url 'home' %}">Back to homepage</a></p>
+</div>
+
 {% endblock content %}

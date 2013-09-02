@@ -53,7 +53,6 @@ def form(request):
                 #todo: remove freeze
                 import time
                 time.sleep(2)  # delay AJAX response for 5 seconds
-                #todo: redirect fix
                 return HttpResponseRedirect('/success/')
 
             else:
