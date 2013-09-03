@@ -5,13 +5,16 @@
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <title>42 Coffee Cups Test Assignment - changing contact data</title>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
   <script type="text/javascript" src="{% static 'js/jquery-ajax-form.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+
+  <link href="{% static 'css/jquery.loadmask.css' %}" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{% static 'js/jquery.loadmask.min.js' %}"></script>
 {% endblock %}
 
 
@@ -21,6 +24,7 @@
 <h3>42 Coffee Cups Test Assignment</h3>
 {# <form action="." method="post" enctype="multipart/form-data" id="contactform">  #}
 <form action="{% url 'form' %}" method="post" enctype="multipart/form-data" id="contactform">
+    <div id="mask">
     <div id="ajaxwrapper">
         {% csrf_token %}
         {{ form.non_field_errors }}
@@ -74,6 +78,7 @@
                 {{ form.bio }} </div></td></tr>
             </tbody>
         </table>        <p id="sendwrapper"><input type="submit" value="Save" id="sendbutton"/>   <a href="/">Cancel</a></p>
+    </div>
     </div>
 </form>
 
