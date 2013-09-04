@@ -11,15 +11,10 @@ from django.test.client import Client
 
 from random import random
 from django_hello_world.hello.models import Requests, Contact
-import os
+from django_hello_world.settings import rel
 
-if os.getcwd().rpartition('/')[2] == 'django_hello_world':
-    # on development machine makefile in different location than in buildserver
-    hello_fixtures_file = ['hello/fixtures/dump.json']
-    print 'running from APP root'
-else:
-    hello_fixtures_file = ['django_hello_world/hello/fixtures/dump.json']
-    print 'running from PROJECT root'
+hello_fixtures_file = [rel('initial_data.json')]
+
 
 class HttpTest(TestCase):
     fixtures = hello_fixtures_file

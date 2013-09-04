@@ -1,6 +1,8 @@
 # Django settings for django_hello_world project.
 
 import os
+
+
 def rel(*x):
     return os.path.normpath(os.path.abspath(os.path.join(os.path.dirname(__file__), *x)))
 
@@ -31,7 +33,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Moscow'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
