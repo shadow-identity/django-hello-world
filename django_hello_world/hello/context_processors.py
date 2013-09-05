@@ -1,8 +1,3 @@
-"""from django.core.context_processors import request
-from django.template import RequestContext
-from django.shortcuts import render_to_response"""
-
-
 def get_settings_dict():
     """ returns dictionary with all settings """
     from django.conf import settings

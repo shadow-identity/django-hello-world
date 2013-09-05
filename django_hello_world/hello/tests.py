@@ -13,6 +13,11 @@ from random import random
 from django_hello_world.hello.models import Requests, Contact
 from django_hello_world.settings import rel
 
+from django.template import RequestContext, Context, Template
+from django.test.client import RequestFactory
+from django_hello_world.hello.context_processors import django_settings, get_settings_dict
+
+
 hello_fixtures_file = [rel('initial_data.json')]
 
 
@@ -100,12 +105,21 @@ class MiddlewareTest(TestCase):
         self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
         self.assertContains(response, 'This field is required')
 
+    def test_tag_edit_link(self):
+        c = Context()
+
+        c.update({'id': 1})
+        out = Template(
+            '{% load hello_extras %}'
+            '{% edit_link {{ id }} %}'
+        ).render(c)
+        example = '<a href="http://127.0.0.1:8000/admin/hello/contact/1/">(admin)</a>'
+        self.assertEqual(out, example)
+
 
 class ContextProcessorTest(TestCase):
+
     def test_django_settings(self):
-        from django.template import RequestContext
-        from django.test.client import RequestFactory
-        from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 
         factory = RequestFactory()
         request = factory.get('/')

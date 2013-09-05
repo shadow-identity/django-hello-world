@@ -21,7 +21,8 @@ def home(request):
             'jabber': record.jabber,
             'other_contacts': record.other_contacts,
             'date_of_birth': record.date_of_birth,
-            'photo': record.photo
+            'photo': record.photo,
+            'id': record.id
             }
 
 
