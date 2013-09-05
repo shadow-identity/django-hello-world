@@ -7,12 +7,26 @@ register = template.Library()
 def do_get_admin_link(parser, token):
     """ parser
     """
-    return GetAdminLinkNode('nope')
+    try:
+        tag_name, user_id = token.split_contents()
+    except ValueError:
+        raise template.TemplateSyntaxError('%r tag argument requires a user id, got "%s"'
+                                           % (token.contents.split()[0], (token.contents.split()[1:])))
+
+    return GetAdminLinkNode(user_id[1:-1])
 
 
 class GetAdminLinkNode(template.Node):
-    def __init__(self, format_string):
-        self.format_string = format_string
+    def __init__(self, user_id):
+        print 'fuck you'
+        self.user_id = template.Variable(user_id)
+        print type(self.user_id), self.user_id
 
     def render(self, context):
-        return self.format_string
+        try:
+            self.user_id = int(self.user_id)
+            return self.user_id
+        except ValueError:
+            return ''
+
+

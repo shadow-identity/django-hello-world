@@ -111,7 +111,7 @@ class MiddlewareTest(TestCase):
         c.update({'id': 1})
         out = Template(
             '{% load hello_extras %}'
-            '{% edit_link {{ id }} %}'
+            '{% edit_link id %}'
         ).render(c)
         example = '<a href="http://127.0.0.1:8000/admin/hello/contact/1/">(admin)</a>'
         self.assertEqual(out, example)
