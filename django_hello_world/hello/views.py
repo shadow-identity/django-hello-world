@@ -5,7 +5,7 @@ from django_hello_world.hello.models import Requests, ContactForm, Contact
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
-
+from django.conf import settings
 
 @render_to('hello/home.html')
 def home(request):
@@ -22,7 +22,8 @@ def home(request):
             'other_contacts': record.other_contacts,
             'date_of_birth': record.date_of_birth,
             'photo': record.photo,
-            'id': record.id
+            'uid': record.id,
+            'request': request
             }
 
 
@@ -50,10 +51,9 @@ def form(request):
 
             item.save()
             if request.is_ajax():
-                #if getattr(settings, 'DEBUG', False): # only if DEBUG=True
-                #todo: remove freeze
-                import time
-                time.sleep(2)  # delay AJAX response for 5 seconds
+                if getattr(settings, 'DEBUG', False):  # only if DEBUG=True
+                    import time
+                    time.sleep(5)  # delay AJAX response for x seconds
                 return HttpResponseRedirect('/success/')
 
             else:

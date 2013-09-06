@@ -13,8 +13,8 @@ full_test: dump
 test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test hello
 
-shell: venv
-	. ~/progs/venv/django-hello-world/bin/activate; ipython manage.py shell
+shell:
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py shell
 
 run:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py runserver

@@ -1,29 +1,13 @@
 from django import template
-from django.core import urlresolvers
+from django.core.urlresolvers import reverse
 
 register = template.Library()
 
 
-@register.tag(name="edit_link")
-def do_get_admin_link(parser, token):
-    """ parser
-    """
-    try:
-        tag_name, user_id = token.split_contents()
-    except ValueError:
-        raise template.TemplateSyntaxError('%r tag argument requires a user id, got "%s"'
-                                           % (token.contents.split()[0], (token.contents.split()[1:])))
+@register.simple_tag(takes_context=True, name='edit_link')
+def do_get_admin_link(context, uid):
+    """ create hyperlink to admin edit of record by uid """
+    rel_url = reverse('admin:hello_contact_change', args=(uid,))
+    abs_url = context['request'].build_absolute_uri(rel_url)
+    return abs_url
 
-    return GetAdminLinkNode(user_id)
-
-
-class GetAdminLinkNode(template.Node):
-    def __init__(self, user_id_var):
-        self.user_id = template.Variable(user_id_var)
-
-    def render(self, context):
-        try:
-            id = int(self.user_id.resolve(context))
-            return urlresolvers.reverse('admin:hello_contact_change', args=(id,))
-        except ValueError:
-            return ''
