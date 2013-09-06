@@ -1,4 +1,5 @@
 from django import template
+from django.core import urlresolvers
 
 register = template.Library()
 
@@ -13,20 +14,16 @@ def do_get_admin_link(parser, token):
         raise template.TemplateSyntaxError('%r tag argument requires a user id, got "%s"'
                                            % (token.contents.split()[0], (token.contents.split()[1:])))
 
-    return GetAdminLinkNode(user_id[1:-1])
+    return GetAdminLinkNode(user_id)
 
 
 class GetAdminLinkNode(template.Node):
-    def __init__(self, user_id):
-        print 'fuck you'
-        self.user_id = template.Variable(user_id)
-        print type(self.user_id), self.user_id
+    def __init__(self, user_id_var):
+        self.user_id = template.Variable(user_id_var)
 
     def render(self, context):
         try:
-            self.user_id = int(self.user_id)
-            return self.user_id
+            id = int(self.user_id.resolve(context))
+            return urlresolvers.reverse('admin:hello_contact_change', args=(id,))
         except ValueError:
             return ''
-
-
