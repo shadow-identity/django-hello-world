@@ -1,10 +1,3 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
-"""
-
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client
@@ -17,22 +10,16 @@ from django.template import RequestContext
 from django.test.client import RequestFactory
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 
-
 hello_fixtures_file = [rel('initial_data.json')]
 
 
-class HttpTest(TestCase):
+class HelloTest(TestCase):
     fixtures = hello_fixtures_file
 
     def test_hello(self):
         c = Client()
         response = c.get(reverse('home'))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Pavel')
-
-
-class MiddlewareTest(TestCase):
-    fixtures = hello_fixtures_file
+        self.assertContains(response, 'Pavel', status_code=200)
 
     def setUp(self):
         self.c = Client()
@@ -88,8 +75,7 @@ class MiddlewareTest(TestCase):
         self.assertContains(response, 'Success')
 
     def test_login_and_save_invalid(self):
-        """ Test that incorrect data don't saved and reported to user
-        """
+        """ Test that incorrect data don't saved and reported to user """
         self.c.login(username='admin', password='admin')
         self.valid_form['email'] = 'blablabla'
         response = self.c.post(reverse('form'), self.valid_form)
@@ -97,8 +83,7 @@ class MiddlewareTest(TestCase):
         self.assertContains(response, 'Enter a valid email address.')
 
     def test_save_empty(self):
-        """ Test that empty field data don't saved and reported to user
-        """
+        """ Test that empty field data don't saved and reported to user """
         self.c.login(username='admin', password='admin')
         self.valid_form['email'] = ''
         response = self.c.post(reverse('form'), self.valid_form)
@@ -106,15 +91,14 @@ class MiddlewareTest(TestCase):
         self.assertContains(response, 'This field is required')
 
     def test_tag_edit_link(self):
+        """ Test that tag 'edit_link' works properly """
         response = self.c.get('/')
         example = '/admin/hello/contact/1/">(admin)</a>'
         self.assertContains(response, example, status_code=200)
 
-
-class ContextProcessorTest(TestCase):
-
     def test_django_settings(self):
-
+        """ Test context processor 'django_settings'
+        """
         factory = RequestFactory()
         request = factory.get('/')
         RequestContext(request, [django_settings])

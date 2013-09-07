@@ -5,23 +5,53 @@
 {% load hello_extras %}
 <table width="800" cellspacing="10" cols="4">
     <tbody valign="top">
-    <tr><td colspan="2"><h3>42 Coffee Cups Test Assignment</h3></td>
-        <td align="right" colspan="2" valign="middle">
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% edit_link uid %}">(admin)</a>
-        </td>
-    </tr>
-    <tr><td width="15%">Name</td><td width="35%">{{ name }}</td><td colspan="2">Contacts</td></tr>
-    <tr><td>Last Name</td><td>{{ surname }}</td><td width="10px">Email</td><td>{{ email }}</td></tr>
-    <tr><td rowspan="2">Date of birth</td><td rowspan="2">{{ date_of_birth}}</td><td>Jabber</td><td>{{ jabber }}</td></tr>
-    <tr><td>Skype</td><td>{{ skype }}</td></tr>
-    <tr><td rowspan="4" colspan="2">Photo:<br><img src="{{ photo.url }}" whdth="80%" height="80%"></td>
-        <td>Other contacts:</td></tr>
-    <tr><td colspan="2">{{ other_contacts }}</td></tr>
-    <tr><td colspan="2">Bio:</td></tr>
-    <tr><td colspan="2">{{ bio }}</td>
+        <tr>
+            <td colspan="2">
+                <h3>42 Coffee Cups Test Assignment</h3>
+            </td>
+            <td align="right" colspan="2" valign="middle">
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% edit_link record.id %}">(admin)</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">Name</td>
+            <td width="35%">{{ record.name }}</td>
+            <td colspan="2">Contacts</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{ record.surname }}</td>
+            <td width="10px">Email</td>
+            <td>{{ record.email }}</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Date of birth</td>
+            <td rowspan="2">{{ record.date_of_birth}}</td>
+            <td>Jabber</td><td>{{ record.jabber }}</td>
+        </tr>
+        <tr>
+            <td>Skype</td>
+            <td>{{ record.skype }}</td>
+        </tr>
+        <tr>
+            <td rowspan="4" colspan="2">Photo:
+                <br>
+                <img src="{{ record.photo.url }}" width="80%">
+            </td>
+            <td>Other contacts:</td>
+        </tr>
+        <tr>
+            <td colspan="2">{{ record.other_contacts }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">Bio:</td>
+        </tr>
+        <tr>
+            <td colspan="2">{{ record.bio }}</td>
+        </tr>
     </tbody>
 </table>
 <hr align="left">
-<a href="/last_requests">requests</a>
+<a href="{% url 'requests' %}">requests</a>
 {% endblock content %}

@@ -22,7 +22,3 @@ class Requests(models.Model):
         ordering = ['id']
 
 
-class ContactForm(ModelForm):
-
-    class Meta:
-        model = Contact
