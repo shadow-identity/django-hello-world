@@ -17,11 +17,6 @@ hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
 class HelloTest(TestCase):
     fixtures = hello_fixtures_file
 
-    def test_hello(self):
-        c = Client()
-        response = c.get(reverse('home'))
-        self.assertContains(response, 'Pavel', status_code=200)
-
     def setUp(self):
         self.c = Client()
         self.rnd = str(random())
@@ -34,6 +29,10 @@ class HelloTest(TestCase):
                            'photo': 'dlskf',
                            'other_contacts': 'd',
                            'bio': 'd'}
+
+    def test_hello(self):
+        response = self.c.get(reverse('home'))
+        self.assertContains(response, 'Pavel', status_code=200)
 
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
@@ -84,7 +83,7 @@ class HelloTest(TestCase):
         self.assertContains(response, 'Enter a valid email address.')
 
     def test_save_empty(self):
-        """ Test that empty field data don't saved and reported to user """
+        """ Test that empty data field don't saved and reported to user """
         self.c.login(username='admin', password='admin')
         self.valid_form['email'] = ''
         response = self.c.post(reverse('form'), self.valid_form)
@@ -107,3 +106,9 @@ class HelloTest(TestCase):
         settings = get_settings_dict()
         for setting in settings:
             self.assertEqual(RequestContext(request).get(setting), settings[setting])
+
+    def test_saving_state(self):
+        """ Test that we are saving state of records correctly
+        """
+        if settings.ENABLE_DB_SIGNALS:
+            pass
