@@ -20,5 +20,10 @@ run:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py runserver
 
 south:
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py schemamigration hello --auto
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py --settings=django_hello_world.settings_db_change schemamigration hello --auto
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello
+
+makedb:
+	# kostyl na kostyle kostylem pogonaet
+	-. ~/progs/venv/django-hello-world/bin/activate; python manage.py syncdb --settings=django_hello_world.settings_db_change
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello --settings=django_hello_world.settings_db_change
