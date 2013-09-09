@@ -21,5 +21,12 @@ def limit_model(sender, **kwargs):
 @receiver([post_save, post_delete])
 def save_change_of_state(sender, **kwargs):
     if sender != State:
-        pass
+        rec_id = kwargs['instance'].id
+
+        if not 'created' in kwargs:  # this was deletion
+            print 'it was deletion of %s in %s' % (rec_id, sender)
+        elif kwargs['created']:  # creation of new record
+            print 'creation of %s in %s' % (rec_id, sender)
+        else:  # changing of existing record
+            print 'record %s in %s was changed' % (rec_id, sender)
 
