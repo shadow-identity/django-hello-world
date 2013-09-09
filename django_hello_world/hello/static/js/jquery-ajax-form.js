@@ -5,16 +5,14 @@ jQuery(document).ready(function() {
         beforeSubmit: maskForm,
         success: unMaskForm
     }
-    jQuery("#contactform").submit(function(e){
-        jQuery(this).ajaxSubmit(options);
-        return false;
-        e.preventDefault();
-    })
-});
+    jQuery('#contactform').ajaxForm(options)
+})
+
+
 function maskForm() {
-    jQuery("#ajaxwrapper").mask("Saving...")
+    jQuery("#maskwrapper").mask("Saving...")
 }
 function unMaskForm() {
-    jQuery("#ajaxwrapper").unmask()
-}
+    jQuery("#maskwrapper").unmask()
+};
 /*]]>*/

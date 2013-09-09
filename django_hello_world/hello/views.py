@@ -37,7 +37,7 @@ def form(request):
             if request.is_ajax():
                 if getattr(settings, 'DEBUG', False):  # only if DEBUG=True
                     import time
-                    time.sleep(2)  # delay AJAX response for x seconds
+                    time.sleep(5)  # delay AJAX response for x seconds
                 return HttpResponseRedirect('/success/')
 
             else:
