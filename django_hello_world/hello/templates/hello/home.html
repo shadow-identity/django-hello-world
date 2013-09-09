@@ -11,6 +11,8 @@
             <a href="{% edit_link uid %}">(admin)</a>
         </td>
     </tr>
+    <div id="ajaxwrapper">
+
     <tr><td width="15%">Name</td><td width="35%">{{ name }}</td><td colspan="2">Contacts</td></tr>
     <tr><td>Last Name</td><td>{{ surname }}</td><td width="10px">Email</td><td>{{ email }}</td></tr>
     <tr><td rowspan="2">Date of birth</td><td rowspan="2">{{ date_of_birth}}</td><td>Jabber</td><td>{{ jabber }}</td></tr>
@@ -20,6 +22,7 @@
     <tr><td colspan="2">{{ other_contacts }}</td></tr>
     <tr><td colspan="2">Bio:</td></tr>
     <tr><td colspan="2">{{ bio }}</td>
+    </div>
     </tbody>
 </table>
 <hr align="left">
