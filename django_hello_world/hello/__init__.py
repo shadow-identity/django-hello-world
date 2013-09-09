@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import connection
+from django.conf import settings
+
 from django.db.models import get_app, get_models
 
 
@@ -22,10 +24,14 @@ def db_table_exists(model=None, table=None):
 
     return table_name in tables
 
-app = get_app('hello')
-all_tables_exists = True
-for model in get_models(app):
-    all_tables_exists = all_tables_exists and db_table_exists(model)
 
-if all_tables_exists:
+def hello_tables_exists():
+    all_tables_exists = True
+    for model in get_models(get_app('hello')):
+        all_tables_exists = all_tables_exists and db_table_exists(model)
+    return all_tables_exists
+
+settings.HELLO_TABLES_EXISTS = hello_tables_exists()
+
+if settings.HELLO_TABLES_EXISTS:
     import django_hello_world.hello.signals

@@ -1,5 +1,3 @@
-# Django settings for django_hello_world project.
-
 import os
 
 
@@ -174,5 +172,3 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 FIXTURE_DIRS = (rel('hello/fixtures'),)
-
-
