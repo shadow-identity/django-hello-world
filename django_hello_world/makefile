@@ -5,7 +5,7 @@ activate: ../requirements.txt
 	. ~/progs/venv/django-hello-world/bin/activate; pip install -Ur ../requirements.txt
 
 dump:
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata  -e contenttypes > hello/fixtures/initial_data.json
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata -e contenttypes --indent 4 > hello/fixtures/initial_data.json
 
 full_test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test
