@@ -1,7 +1,4 @@
 Django >= 1.5, < 1.6
 django-annoying >= 0.7.6
 South
-#todo: change pil to pillow
-pil
-#todo: into separate file
-ipdb
+pillow >= 2.0

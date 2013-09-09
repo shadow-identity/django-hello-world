@@ -10,7 +10,11 @@
                 <h3>42 Coffee Cups Test Assignment</h3>
             </td>
             <td align="right" colspan="2" valign="middle">
-                <a href="{% url 'login' %}">Login</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'form' %}">Edit</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
                 <a href="{% edit_link record.id %}">(admin)</a>
             </td>
         </tr>
