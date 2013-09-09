@@ -175,4 +175,4 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 FIXTURE_DIRS = (rel('hello/fixtures'),)
 
-ENABLE_DB_SIGNALS = (True,)
+

@@ -2,8 +2,9 @@
 from django.db import connection
 from django.db.models import get_app, get_models
 
+
 def db_table_exists(model=None, table=None):
-    """ Verify the existence of table by model or by table
+    """ Verify the existence of table in db by given model or table
     """
 
     table_name = None
@@ -21,20 +22,10 @@ def db_table_exists(model=None, table=None):
 
     return table_name in tables
 
-# if db_table_exists(table='docflow_document1'):
-#     import docflow.projects.modules_1.signal_events
-#     import docflow.projects.modules_1.signal_document
-#
-# if db_table_exists(get_project_model(1, 'Document')):
-#     import docflow.projects.modules_1.signal_events
-#     import docflow.projects.modules_1.signal_document﻿
-
-print 'aldskfjlaksdjflksdajf'
-
 app = get_app('hello')
-all_exists = True
+all_tables_exists = True
 for model in get_models(app):
-    print model, db_table_exists(model)
-    all_exists = all_exists and db_table_exists(model)
-if all_exists:
+    all_tables_exists = all_tables_exists and db_table_exists(model)
+
+if all_tables_exists:
     import django_hello_world.hello.signals

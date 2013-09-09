@@ -1,9 +1,9 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client
-
+from django_hello_world import hello
 from random import random
-from django_hello_world.hello.models import Requests, Contact
+from django_hello_world.hello.models import Requests, Contact, State
 from django_hello_world.settings import rel
 from django.conf import settings
 
@@ -107,8 +107,14 @@ class HelloTest(TestCase):
         for setting in settings:
             self.assertEqual(RequestContext(request).get(setting), settings[setting])
 
+
+class TestsWithoutFixtures(TestCase):
     def test_saving_state(self):
         """ Test that we are saving state of records correctly
         """
-        if settings.ENABLE_DB_SIGNALS:
-            pass
+        tst_msg = 'blablabla'
+        Requests(req=tst_msg).save()  # Creating record
+        self.assertEqual([State.objects.get(id=0).state, record_id, model], [tst_msg, 0, Requests])
+        tst_msg = 'fufufu'
+        #Requests(req=tst_msg).save()  # Changing record
+        #self.assertEqual(State.objects.get(id=0).state, tst_msg)
