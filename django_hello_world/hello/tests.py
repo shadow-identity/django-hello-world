@@ -5,12 +5,13 @@ from django.test.client import Client
 from random import random
 from django_hello_world.hello.models import Requests, Contact
 from django_hello_world.settings import rel
+from django.conf import settings
 
 from django.template import RequestContext
 from django.test.client import RequestFactory
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 
-hello_fixtures_file = [rel('initial_data.json')]
+hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
 
 
 class HelloTest(TestCase):
