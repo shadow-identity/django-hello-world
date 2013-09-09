@@ -4,6 +4,7 @@ from django_hello_world.hello.models import Requests, State
 from django.conf import settings
 
 if settings.ENABLE_DB_SIGNALS:
+    print 'signals works!'
 
     @receiver(post_save)
     def limit_model(sender, **kwargs):

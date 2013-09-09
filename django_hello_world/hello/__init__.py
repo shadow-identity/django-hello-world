@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import connection
-
+from django.db.models import get_app, get_models
 
 def db_table_exists(model=None, table=None):
     """ Verify the existence of table by model or by table
@@ -29,11 +29,12 @@ def db_table_exists(model=None, table=None):
 #     import docflow.projects.modules_1.signal_events
 #     import docflow.projects.modules_1.signal_document﻿
 
-
-from django.db.models import get_app, get_models
+print 'aldskfjlaksdjflksdajf'
 
 app = get_app('hello')
+all_exists = True
 for model in get_models(app):
     print model, db_table_exists(model)
-
-#import django_hello_world.hello.signals
+    all_exists = all_exists and db_table_exists(model)
+if all_exists:
+    import django_hello_world.hello.signals
