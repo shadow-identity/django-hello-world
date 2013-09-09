@@ -20,3 +20,7 @@ class Requests(models.Model):
         ordering = ['id']
 
 
+class State(models.Model):
+    model = models.CharField(max_length=200)
+    record_id = models.IntegerField()
+    state = models.CharField(max_length=20)
