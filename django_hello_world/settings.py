@@ -171,7 +171,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     # custom
     "django_hello_world.hello.context_processors.django_settings"
-    )
+)
+
+FIXTURE_DIRS = (rel('hello/fixtures'),)
 
 
 

@@ -74,7 +74,7 @@
                     <label for="photo"></label>
                     {{ form.photo }} </div></td>
                 <td colspan="2" valign="bottom">Other contacts:</td></tr>
-            <tr><td rowspan="4" colspan="2"><img src="{{ photo.url }}" whdth="90%"></td>
+            <tr><td rowspan="4" colspan="2"><img src="{{ photo.url }}" width="90%"></td>
                 <td colspan="2"><div class="fieldWrapper">
                     {{ form.other_contacts.errors }}
                     <label for="other_contacts"></label>
@@ -94,7 +94,7 @@
 </form>
 
 <hr align="left">
-<a href="/last_requests">requests</a>
+<a href="{% url 'requests' %}">requests</a>
 
 {% endblock %}
 
