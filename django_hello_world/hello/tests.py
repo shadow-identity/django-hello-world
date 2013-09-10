@@ -131,24 +131,22 @@ class HelloTest(TestCase):
                          [unicode(tst_msg), last_pk, unicode(Requests)])
 
     def test_command_show_models_objects(self):
+        def compare(command_output):
+            """ compare every string in output with all objects
+            """
+            for (i, table) in enumerate(ContentType.objects.all()):
+                testing_string = "%s.%s\t%d" % (table.model_class().__module__,
+                                                table.model_class().__name__,
+                                                table.model_class()._default_manager.count())
+                if testing_string != command_output.getvalue().splitlines()[i]:
+                    return False
+            return True
+
         out = StringIO()
         err = StringIO()
         call_command('show_models_objects', stdout=out, stderr=err)
         self.assertEqual(out.getvalue(), err.getvalue())
-        for (i, table) in enumerate(ContentType.objects.all()):
-            testing_string = "%s.%s\t%d" % (table.model_class().__module__,
-                                            table.model_class().__name__,
-                                            table.model_class()._default_manager.count())
-
-            self.assertEqual(testing_string, out.getvalue().splitlines()[i])
+        self.assertTrue(compare(out))
+        # self-test
         Requests(req='test', priority=1).save()
-
-        # self test
-        result = True
-        for (i, table) in enumerate(ContentType.objects.all()):
-            testing_string = "%s.%s\t%d" % (table.model_class().__module__,
-                                            table.model_class().__name__,
-                                            table.model_class()._default_manager.count())
-            if testing_string != out.getvalue().splitlines()[i]:
-                result = result and False
-        self.assertFalse(result)
+        self.assertFalse(compare(out))
