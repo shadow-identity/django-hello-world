@@ -497,4 +497,1304 @@
         "email": "pavel.nedr@gmail.com", 
         "photo": "photos/ioWpqUauxho.jpg"
     }
+},
+{
+    "pk": 1430, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/jsi18n/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': '*/*',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/group/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/jsi18n/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff808213bd0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1431, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/auth/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/group/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/auth/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff8100488d0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1432, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/auth/user/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/auth/user/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff7f007fc50>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1433, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/jsi18n/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': '*/*',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/user/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/jsi18n/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff8081e6e50>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1434, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/auth/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_IF_MODIFIED_SINCE': 'Tue, 10 Sep 2013 07:01:13 GMT',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/user/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/auth/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff8081e6b50>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1435, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/auth/user/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_IF_MODIFIED_SINCE': 'Tue, 10 Sep 2013 07:01:14 GMT',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/auth/user/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff8081e6e50>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1436, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/jsi18n/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': '*/*',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/auth/user/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/jsi18n/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff7f007f6d0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1437, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff7f007fed0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1438, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7ff81ed65270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x271e8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7ff81ed1e2d0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1439, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CACHE_CONTROL': 'max-age=0',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f66ca4f3270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x1a5f8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f66b8031850>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1440, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CACHE_CONTROL': 'max-age=0',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f1af7601270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x22098d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f1ae8031850>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1441, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CACHE_CONTROL': 'max-age=0',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f70d996d270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x1e1d8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f70c802f850>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1442, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/media/photos/ioWpqUauxho.jpg,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'image/webp,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CACHE_CONTROL': 'max-age=0',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_IF_MODIFIED_SINCE': 'Mon, 09 Sep 2013 04:53:43 GMT',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/media/photos/ioWpqUauxho.jpg',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f70d996d270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x1e1d8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f70c802f9d0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1443, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/hello/contact/1/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_IF_MODIFIED_SINCE': 'Tue, 10 Sep 2013 06:59:19 GMT',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/hello/contact/1/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f70d996d270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x1e1d8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f70c0137450>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1444, 
+    "model": "hello.requests", 
+    "fields": {
+        "priority": 1, 
+        "req": "<WSGIRequest\npath:/admin/jsi18n/,\nGET:<QueryDict: {}>,\nPOST:<QueryDict: {}>,\nCOOKIES:{'csrftoken': 'be57d9904b535ceddea15713886b4ec3',\n 'sessionid': '4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq'},\nMETA:{'CCACHE_HASHDIR': '',\n 'COLORFGBG': '15;0',\n 'CONTENT_LENGTH': '',\n 'CONTENT_TYPE': 'text/plain',\n 'CVS_RSH': 'ssh',\n 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-GcMeKkVOnF,guid=5c058f1fc93d3c642a1928f4522d4a9d',\n 'DESKTOP_SESSION': 'default',\n 'DISPLAY': ':0',\n 'DJANGO_SETTINGS_MODULE': 'django_hello_world.settings',\n 'DM_CONTROL': '/var/run/xdmctl',\n 'GATEWAY_INTERFACE': 'CGI/1.1',\n 'GS_LIB': '',\n 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nedr/.gtkrc-2.0:/home/nedr/.gtkrc-2.0-kde4:/home/nedr/.kde/share/config/gtkrc-2.0',\n 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nedr/.gtkrc:/home/nedr/.kde/share/config/gtkrc',\n 'HISTCONTROL': 'ignoredups',\n 'HISTSIZE': '1000',\n 'HOME': '/home/nedr',\n 'HOSTNAME': 'is.218arz.ru',\n 'HTTP_ACCEPT': '*/*',\n 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',\n 'HTTP_ACCEPT_LANGUAGE': 'ru,en-US;q=0.8,en;q=0.6',\n 'HTTP_CONNECTION': 'keep-alive',\n 'HTTP_COOKIE': 'sessionid=4dqiw9sbwm3kt3b3wcsqd8ifgmvksbiq; csrftoken=be57d9904b535ceddea15713886b4ec3',\n 'HTTP_HOST': '127.0.0.1:8000',\n 'HTTP_REFERER': 'http://127.0.0.1:8000/admin/hello/contact/1/',\n 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36',\n 'KDEDIRS': '/usr',\n 'KDE_FULL_SESSION': 'true',\n 'KDE_IS_PRELINKED': '1',\n 'KDE_MULTIHEAD': 'false',\n 'KDE_SESSION_UID': '1000',\n 'KDE_SESSION_VERSION': '4',\n 'KONSOLE_DBUS_SERVICE': ':1.43',\n 'KONSOLE_DBUS_SESSION': '/Sessions/1',\n 'KONSOLE_PROFILE_NAME': '\\xd0\\x9a\\xd0\\xbe\\xd0\\xbc\\xd0\\xb0\\xd0\\xbd\\xd0\\xb4\\xd0\\xbd\\xd0\\xb0\\xd1\\x8f \\xd0\\xbe\\xd0\\xb1\\xd0\\xbe\\xd0\\xbb\\xd0\\xbe\\xd1\\x87\\xd0\\xba\\xd0\\xb0',\n 'LANG': 'ru_RU.UTF-8',\n 'LANGUAGE': '',\n 'LESSOPEN': '||/usr/bin/lesspipe.sh %s',\n 'LOGNAME': 'nedr',\n 'LS_COLORS': 'rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:',\n 'MAIL': '/var/spool/mail/nedr',\n 'MAKEFLAGS': '',\n 'MAKELEVEL': '1',\n 'MFLAGS': '',\n 'PATH': '/home/nedr/progs/venv/django-hello-world/bin:/home/nedr/progs/venv/django-hello-world/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/nedr/.local/bin:/home/nedr/bin',\n 'PATH_INFO': u'/admin/jsi18n/',\n 'PROFILEHOME': '',\n 'PS1': '(django-hello-world)',\n 'PWD': '/home/nedr/progs/42/django-hello-world/django_hello_world',\n 'QTDIR': '/usr/lib64/qt-3.3',\n 'QTINC': '/usr/lib64/qt-3.3/include',\n 'QTLIB': '/usr/lib64/qt-3.3/lib',\n 'QT_GRAPHICSSYSTEM_CHECKED': '1',\n 'QT_PLUGIN_PATH': '/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/nedr/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/',\n 'QUERY_STRING': '',\n 'REMOTE_ADDR': '127.0.0.1',\n 'REMOTE_HOST': '',\n 'REQUEST_METHOD': 'GET',\n 'RUN_MAIN': 'true',\n 'SCRIPT_NAME': u'',\n 'SERVER_NAME': 'localhost.localdomain',\n 'SERVER_PORT': '8000',\n 'SERVER_PROTOCOL': 'HTTP/1.1',\n 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',\n 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1318,unix/unix:/tmp/.ICE-unix/1318',\n 'SHELL': '/bin/bash',\n 'SHELL_SESSION_ID': 'b27da8c3ec6b400082849d51632b7cda',\n 'SHLVL': '4',\n 'SSH_AGENT_PID': '1229',\n 'SSH_ASKPASS': '/usr/bin/ksshaskpass',\n 'SSH_AUTH_SOCK': '/tmp/ssh-cNxX9NsPrplm/agent.1188',\n 'TERM': 'xterm-256color',\n 'TZ': 'Europe/Moscow',\n 'USER': 'nedr',\n 'VIRTUAL_ENV': '/home/nedr/progs/venv/django-hello-world',\n 'WINDOWID': '39845915',\n 'WINDOWPATH': '1',\n 'XAUTHORITY': '/tmp/kde-nedr/xauth-1000-_0',\n 'XCURSOR_THEME': 'Adwaita',\n 'XDG_CURRENT_DESKTOP': 'KDE',\n 'XDG_DATA_DIRS': '/usr/share:/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share',\n 'XDG_MENU_PREFIX': 'kde4-',\n 'XDG_RUNTIME_DIR': '/run/user/1000',\n 'XDG_SEAT': 'seat0',\n 'XDG_SESSION_ID': '1',\n 'XDG_VTNR': '1',\n 'XDM_MANAGED': 'method=classic',\n '_': '/home/nedr/progs/venv/django-hello-world/bin/python',\n 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f70d996d270>,\n 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x1e1d8d8>,\n 'wsgi.input': <socket._fileobject object at 0x7f70c01375d0>,\n 'wsgi.multiprocess': False,\n 'wsgi.multithread': True,\n 'wsgi.run_once': False,\n 'wsgi.url_scheme': 'http',\n 'wsgi.version': (1, 0)}>"
+    }
+},
+{
+    "pk": 1, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 7, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 2, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'django_hello_world.hello.models.Contact'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 3, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1392, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 4, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1393, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 5, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1394, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 6, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1395, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 7, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1396, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 8, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1397, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 9, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1398, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 10, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1399, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 11, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1400, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 12, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1401, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 13, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1402, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 14, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1403, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 15, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1404, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 16, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1405, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 17, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1406, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 18, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 19, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 2, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 20, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 3, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 21, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 4, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 22, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 5, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 23, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 6, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 24, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'django_hello_world.hello.models.Contact'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 25, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1392, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 26, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1393, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 27, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1394, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 28, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1395, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 29, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1396, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 30, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1397, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 31, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1398, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 32, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1399, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 33, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1400, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 34, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1401, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 35, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1402, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 36, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1403, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 37, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1404, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 38, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1405, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 39, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1406, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 40, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 41, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 2, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 42, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 3, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 43, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 4, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 44, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 5, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 45, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 6, 
+        "model": "<class 'south.models.MigrationHistory'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 46, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1392, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 47, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1407, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 48, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1393, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 49, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1408, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 50, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1394, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 51, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1409, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 52, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'django_hello_world.hello.models.Contact'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 53, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1395, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 54, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1410, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 55, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1396, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 56, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1411, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 57, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1397, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 58, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1412, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 59, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1398, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 60, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1413, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 61, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1, 
+        "model": "<class 'django_hello_world.hello.models.Contact'>", 
+        "state": "changed"
+    }
+},
+{
+    "pk": 62, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1399, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 63, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1414, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 64, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1400, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 65, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1415, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 66, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1401, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 67, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1416, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 68, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1402, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 69, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1417, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 70, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1403, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 71, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1418, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 72, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1404, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 73, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1419, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 74, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1405, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 75, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1420, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 76, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1406, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 77, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1421, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 78, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1407, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 79, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1422, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 80, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1408, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 81, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1423, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 82, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1409, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 83, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1424, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 84, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1410, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 85, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1425, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 86, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1411, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 87, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1426, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 88, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1412, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 89, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1427, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 90, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1413, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 91, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1428, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 92, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1414, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 93, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1429, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 94, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1415, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 95, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1430, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 96, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1416, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 97, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1431, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 98, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1417, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 99, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1432, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 100, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1418, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 101, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1433, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 102, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1419, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 103, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1434, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 104, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1420, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 105, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1435, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 106, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1421, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 107, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1436, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 108, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1422, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 109, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1437, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 110, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1423, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 111, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1438, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 112, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1424, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 113, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1439, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 114, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1425, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 115, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1440, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 116, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1426, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 117, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1441, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 118, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1427, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 119, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1442, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 120, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1428, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 121, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1443, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 122, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1429, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "deleted"
+    }
+},
+{
+    "pk": 123, 
+    "model": "hello.state", 
+    "fields": {
+        "record_id": 1444, 
+        "model": "<class 'django_hello_world.hello.models.Requests'>", 
+        "state": "created"
+    }
+},
+{
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-08-23T22:06:46.244", 
+        "app_name": "hello", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 2, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-08-23T22:13:15.318", 
+        "app_name": "hello", 
+        "migration": "0002_auto__del_field_contact_contacts__add_field_contact_email__add_field_c"
+    }
+},
+{
+    "pk": 3, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-08-29T02:08:13.194", 
+        "app_name": "hello", 
+        "migration": "0003_auto__add_requests"
+    }
+},
+{
+    "pk": 4, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-08-29T02:23:54.531", 
+        "app_name": "hello", 
+        "migration": "0004_auto__add_field_contact_photo"
+    }
+},
+{
+    "pk": 5, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-09-01T20:32:30.749", 
+        "app_name": "hello", 
+        "migration": "0005_auto__chg_field_contact_email"
+    }
+},
+{
+    "pk": 6, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-09-01T21:02:50.614", 
+        "app_name": "hello", 
+        "migration": "0006_auto__chg_field_contact_jabber"
+    }
+},
+{
+    "pk": 7, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-09-09T21:19:11.022", 
+        "app_name": "hello", 
+        "migration": "0007_auto__add_state"
+    }
+},
+{
+    "pk": 8, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-09-10T12:15:17.844", 
+        "app_name": "hello", 
+        "migration": "0008_auto__add_field_requests_priority"
+    }
 }
+]
