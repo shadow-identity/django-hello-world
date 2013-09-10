@@ -110,10 +110,22 @@ class HelloTest(TestCase):
     def test_saving_state(self):
         """ Test that we are saving state of records correctly
         """
-        tst_msg = 'blablabla'
-        Requests(req=tst_msg).save()  # Creating record
-        last_instance = State.objects.get(pk__max)
-        self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model], [tst_msg, 0, Requests])
-        tst_msg = 'fufufu'
-        #Requests(req=tst_msg).save()  # Changing record
-        #self.assertEqual(State.objects.get(id=0).state, tst_msg)
+        tst_msg = 'created'
+        record = Requests(req=tst_msg) # Creating record
+        record.save()
+        last_instance = State.objects.latest('pk')
+        self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
+                         [unicode(tst_msg), record.pk, unicode(Requests)])
+        tst_msg = 'changed'
+        record.req = 'fuck'
+        record.save()
+        last_instance = State.objects.latest('pk')
+        self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
+                         [unicode(tst_msg), record.pk, unicode(Requests)])
+        tst_msg = 'deleted'
+        last_pk = record.pk
+        record.delete()
+        last_instance = State.objects.latest('pk')
+        self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
+                         [unicode(tst_msg), last_pk, unicode(Requests)])
+
