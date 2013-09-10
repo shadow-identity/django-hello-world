@@ -14,7 +14,7 @@
     {% comment %} Ajax form submission {% endcomment %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
     <script src="//malsup.github.com/jquery.form.js"></script>
-    <script type="text/javascript" src="{% static 'js/jquery-ajax-form.js' %}"></script>
+    {% comment %} script itself in form template {% endcomment %}
 
     {% comment %} masking form while uploading data {% endcomment %}
     <link href="{% static 'css/jquery.loadmask.css' %}" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+    {% comment %} script itself in form template {% endcomment %}
 
 
 {% endblock head %}

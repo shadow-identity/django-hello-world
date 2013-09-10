@@ -1,3 +1,6 @@
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ajax-form.js' %}"></script>
 <form action="{% url 'form' %}" method="post" enctype="multipart/form-data" id="contactform">
     {% csrf_token %}
     {{ form.non_field_errors }}
@@ -43,9 +46,9 @@
                 {{ form.bio }} </div></td></tr>
             </tbody>
         </table>
-    <p>
-        <input type="submit" value="Save" id="sendbutton"/>
-        <a href="/">Cancel</a>
-    </p>
+        <p>
+            <input type="submit" value="Save" id="sendbutton"/>
+            <a href="/">Cancel</a>
+        </p>
     </div>
 </form>
