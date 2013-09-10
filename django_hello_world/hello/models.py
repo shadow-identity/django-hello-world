@@ -15,6 +15,7 @@ class Contact(models.Model):
 
 class Requests(models.Model):
     req = models.TextField()
+    priority = models.IntegerField(default=1)
 
     class Meta():
         ordering = ['id']
