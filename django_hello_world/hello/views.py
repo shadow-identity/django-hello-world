@@ -25,10 +25,14 @@ def requests(request):
     request_list = [req.req for req in Requests.objects.reverse()[:10]]
     return {'request_list': request_list}
 
+
 @login_required
 #@render_to('hello/form.html')
 def form(request):
-
+    if request.is_ajax():
+        template = 'hello/form.html'
+    else:
+        template = 'hello/edit.html'
     item = get_object_or_404(Contact, id=1)
     form = ContactForm(request.POST or None, request.FILES or None,  instance=item)
     if request.method == 'POST':
@@ -37,13 +41,13 @@ def form(request):
             if request.is_ajax():
                 if getattr(settings, 'DEBUG', False):  # only if DEBUG=True
                     import time
-                    time.sleep(5)  # delay AJAX response for x seconds
+                    time.sleep(2)  # delay AJAX response for x seconds
                 return HttpResponseRedirect('/success/')
 
             else:
                 return HttpResponseRedirect('/success/')
 
-    return render(request, 'hello/form.html', {
+    return render(request, template, {
         'form': form, 'photo': Contact.objects.get(pk=1).photo
     })
 

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% load staticfiles %}
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>42 Coffee Cups Test Assignment - changing contact data</title>
+    {% comment %}<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> {% endcomment %}
+    <link href="{% static 'css/hello.css' %}" rel="stylesheet" type="text/css" />
+
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+
+
+    {% comment %} Ajax form submission {% endcomment %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="//malsup.github.com/jquery.form.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ajax-form.js' %}"></script>
+
+    {% comment %} masking form while uploading data {% endcomment %}
+    <link href="{% static 'css/jquery.loadmask.css' %}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{% static 'js/jquery.loadmask.min.js' %}"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+
+
+{% endblock head %}
+
+
+{% block content %}
+    <h3>42 Coffee Cups Test Assignment</h3>
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+    <div id="ajaxwrapper">
+        {% include 'hello/form.html' %}
+    </div>
+    <hr align="left">
+    <a href="{% url 'requests' %}">requests</a>
+
+{% endblock %}
+
