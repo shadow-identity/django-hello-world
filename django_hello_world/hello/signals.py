@@ -20,17 +20,11 @@ def limit_model(sender, **kwargs):
 
 @receiver([post_save, post_delete])
 def save_change_of_state(sender, **kwargs):
-    if sender != State and settings.HELLO_TABLES_EXISTS and sender in settings.HELLO_TABLES:
+    if sender != State and sender in settings.HELLO_TABLES:
         rec_id = kwargs['instance'].id
-
         if not 'created' in kwargs:  # this was deletion
             State(record_id=rec_id, model=sender, state='deleted').save()
-            #print 'deleted'
         elif kwargs['created']:  # creation of new record
-            # import ipdb
-            # ipdb.set_trace()
             State(record_id=rec_id, model=sender, state='created').save()
-            #print 'created'
         else:  # changing of existing record
             State(record_id=rec_id, model=sender, state='changed').save()
-            #print 'changed'
