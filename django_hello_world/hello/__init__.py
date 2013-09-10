@@ -27,7 +27,8 @@ def db_table_exists(model=None, table=None):
 
 def hello_tables_exists():
     all_tables_exists = True
-    for model in get_models(get_app('hello')):
+    settings.HELLO_TABLES = get_models(get_app('hello'))
+    for model in settings.HELLO_TABLES:
         all_tables_exists = all_tables_exists and db_table_exists(model)
     return all_tables_exists
 
