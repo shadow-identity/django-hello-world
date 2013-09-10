@@ -29,8 +29,8 @@ def save_change_of_state(sender, **kwargs):
             print 'deleted'
         elif kwargs['created']:  # creation of new record
             print '2'
-            import ipdb
-            ipdb.set_trace()
+            # import ipdb
+            # ipdb.set_trace()
             State(record_id=rec_id, model=sender, state='created').save()
             print 'created'
         else:  # changing of existing record

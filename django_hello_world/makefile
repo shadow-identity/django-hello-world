@@ -25,5 +25,5 @@ south:
 
 makedb:
 	# kostyl na kostyle kostylem pogonaet
-	-. ~/progs/venv/django-hello-world/bin/activate; python manage.py syncdb --settings=django_hello_world.settings_db_change
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello --settings=django_hello_world.settings_db_change
+	-. ~/progs/venv/django-hello-world/bin/activate; python manage.py syncdb
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello
