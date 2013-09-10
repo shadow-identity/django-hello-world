@@ -1,7 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client
-from django_hello_world import hello
 from random import random
 from django_hello_world.hello.models import Requests, Contact, State
 from django_hello_world.settings import rel
