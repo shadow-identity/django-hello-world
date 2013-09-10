@@ -1,14 +1,16 @@
 from django.core.urlresolvers import reverse
+from django.core.management import call_command
 from django.test import TestCase
 from django.test.client import Client
 from random import random
 from django_hello_world.hello.models import Requests, Contact, State
 from django_hello_world.settings import rel
 from django.conf import settings
-
+from StringIO import StringIO
 from django.template import RequestContext
 from django.test.client import RequestFactory
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
+from django.contrib.contenttypes.models import ContentType
 
 hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
 
@@ -128,3 +130,25 @@ class HelloTest(TestCase):
         self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
                          [unicode(tst_msg), last_pk, unicode(Requests)])
 
+    def test_command_show_models_objects(self):
+        out = StringIO()
+        err = StringIO()
+        call_command('show_models_objects', stdout=out, stderr=err)
+        self.assertEqual(out.getvalue(), err.getvalue())
+        for (i, table) in enumerate(ContentType.objects.all()):
+            testing_string = "%s.%s\t%d" % (table.model_class().__module__,
+                                            table.model_class().__name__,
+                                            table.model_class()._default_manager.count())
+
+            self.assertEqual(testing_string, out.getvalue().splitlines()[i])
+        Requests(req='test', priority=1).save()
+
+        # self test
+        result = True
+        for (i, table) in enumerate(ContentType.objects.all()):
+            testing_string = "%s.%s\t%d" % (table.model_class().__module__,
+                                            table.model_class().__name__,
+                                            table.model_class()._default_manager.count())
+            if testing_string != out.getvalue().splitlines()[i]:
+                result = result and False
+        self.assertFalse(result)
