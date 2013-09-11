@@ -2,11 +2,12 @@ from annoying.decorators import render_to
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django_hello_world.hello.models import Requests, Contact
-from django_hello_world.hello.forms import ContactForm
+from django_hello_world.hello.forms import ContactForm, CustomRequestsForm
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.conf import settings
+from django.forms.models import modelformset_factory
 
 
 @render_to('hello/home.html')
@@ -22,8 +23,19 @@ def home(request):
 
 @render_to('hello/requests.html')
 def requests(request):
-    request_list = [req.req for req in Requests.objects.reverse()[:10]]
-    return {'request_list': request_list}
+    RequestsFormSet = modelformset_factory(Requests, form=CustomRequestsForm, max_num=10)
+    if request.method == 'POST':
+        formset = RequestsFormSet(request.POST, request.FILES)
+        if formset.is_valid():
+            for form in formset:
+                form.save()
+    else:
+        formset = RequestsFormSet()
+        # for form in formset:
+        #     print (form.as_table())
+    return {'formset': formset}
+    #request_list = [req.req for req in Requests.objects.reverse()[:10]]
+    #return {'request_list': request_list}
 
 
 @login_required

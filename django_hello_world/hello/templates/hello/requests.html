@@ -1,12 +1,22 @@
 {% block content %}
 
-<h3>Latest 10 requests</h3>
+<form method="post" action="">
+    {{ formset.management_form }}
+    <table>
+        <tbody valign="top">
+        {% for form in formset %}
+           {{ form }}
+        {% endfor %}
+        </tbody>
+    </table>
+</form>
 
-<ul>
-{% for request in request_list %}
-    <hr>{{ request }}
-{% endfor %}
 
-</ul>
 
 {% endblock %}
+ <tr>
+            <td>url</td><td>{{ form.url }}</td>
+            <td>date & time</td><td>{{ form.datetime }}</td>
+            <td>user</td><td>{{ form.user }}</td>
+            <td>priority</td><td>{{ form.priority }}</td>
+            </tr>

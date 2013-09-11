@@ -14,11 +14,11 @@ class Contact(models.Model):
 
 
 class Requests(models.Model):
-    req = models.TextField()
-    url = models.URLField(blank=True)
-    datetime = models.DateTimeField(auto_now_add=True)
-    method = models.CharField(max_length=10, blank=True)
-    user = models.CharField(max_length=50, blank=True)
+    req = models.TextField(editable=False)
+    url = models.URLField(blank=True, editable=True)
+    datetime = models.DateTimeField(auto_now_add=True, editable=True)
+    method = models.CharField(max_length=10, blank=True, editable=True)
+    user = models.CharField(max_length=50, blank=True, editable=True)
     priority = models.IntegerField(default=1)
 
     class Meta():

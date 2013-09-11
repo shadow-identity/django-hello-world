@@ -7,9 +7,7 @@ from django.views.generic import TemplateView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
     url(r'^$', 'django_hello_world.hello.views.home', name='home'),
-    # url(r'^django_hello_world/', include('django_hello_world.foo.urls')),
 
     url(r'^last_requests/$', 'django_hello_world.hello.views.requests', name='requests'),
     url(r'^accounts/profile/$', 'django_hello_world.hello.views.form', name='form'),
