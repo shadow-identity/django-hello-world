@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django_hello_world.hello',
     'south',
+    'inplaceeditform',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -167,6 +168,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.static",
     "django.contrib.messages.context_processors.messages",
+    'django.core.context_processors.request',
     # custom
     "django_hello_world.hello.context_processors.django_settings"
 )

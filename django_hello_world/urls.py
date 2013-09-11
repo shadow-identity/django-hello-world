@@ -6,6 +6,9 @@ from django.views.generic import TemplateView
 
 admin.autodiscover()
 
+js_info_dict = {
+    'packages': ('django.conf',),
+}
 urlpatterns = patterns('',
     url(r'^$', 'django_hello_world.hello.views.home', name='home'),
 
@@ -23,6 +26,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    (r'^inplaceeditform/', include('inplaceeditform.urls')),
+    (r'^jsi18n$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )
 
 
@@ -31,3 +37,4 @@ urlpatterns += patterns('django.contrib.staticfiles.views',
 )
 
 urlpatterns += staticfiles_urlpatterns()
+

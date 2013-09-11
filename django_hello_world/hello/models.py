@@ -15,10 +15,10 @@ class Contact(models.Model):
 
 class Requests(models.Model):
     req = models.TextField(editable=False)
-    url = models.URLField(blank=True, editable=True)
-    datetime = models.DateTimeField(auto_now_add=True, editable=True)
+    url = models.URLField(blank=True, editable=False)
+    datetime = models.DateTimeField(auto_now_add=True)
     method = models.CharField(max_length=10, blank=True, editable=True)
-    user = models.CharField(max_length=50, blank=True, editable=True)
+    user = models.CharField(max_length=50, blank=True, editable=False)
     priority = models.IntegerField(default=1)
 
     class Meta():

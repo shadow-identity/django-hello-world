@@ -1,11 +1,39 @@
 {% block content %}
+{% load inplace_edit %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+{% inplace_static %}
+    <form method="post" action="">
 
-<form method="post" action="">
     {{ formset.management_form }}
     <table>
+        <thead>
+            <tr>
+                <td>date</td>
+                <td>user</td>
+                <td>url</td>
+                <td>method</td>
+                <td>priority</td>
+            </tr>
+        </thead>
         <tbody valign="top">
-        {% for form in formset %}
-           {{ form }}
+        {% for req in requests %}
+            <tr>
+                <td>
+                    {{ req.datetime }}
+                </td>
+                <td>
+                    {{ req.user }}
+                </td>
+                <td>
+                    {{ req.url }}
+                </td>
+                <td>
+                    {% req.method %}
+                </td>
+                <td>
+                    {% inplace_edit "req.priority" %}
+                </td>
+            </tr>
         {% endfor %}
         </tbody>
     </table>

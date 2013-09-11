@@ -23,17 +23,21 @@ def home(request):
 
 @render_to('hello/requests.html')
 def requests(request):
-    RequestsFormSet = modelformset_factory(Requests, form=CustomRequestsForm, max_num=10)
-    if request.method == 'POST':
-        formset = RequestsFormSet(request.POST, request.FILES)
-        if formset.is_valid():
-            for form in formset:
-                form.save()
-    else:
-        formset = RequestsFormSet()
-        # for form in formset:
-        #     print (form.as_table())
-    return {'formset': formset}
+    requests = Requests.objects.all()
+    return {'request': request,
+            'requests': requests}
+    # RequestsFormSet = modelformset_factory(Requests, max_num=10)
+    # if request.method == 'POST':
+    #     formset = RequestsFormSet(request.POST, request.FILES)
+    #     if formset.is_valid():
+    #         for form in formset:
+    #             form.save()
+    # else:
+    #     formset = RequestsFormSet()
+    #     # for form in formset:
+    #     #     print (form.as_table())
+    # print formset
+    # return {'formset': formset}
     #request_list = [req.req for req in Requests.objects.reverse()[:10]]
     #return {'request_list': request_list}
 
