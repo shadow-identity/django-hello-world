@@ -1,5 +1,5 @@
-$(document).ready(function()
+$(function()
     {
-        $("#reqTable").tablesorter();
+        $("#reqTable").dataTable();
     }
 );

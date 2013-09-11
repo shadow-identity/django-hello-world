@@ -3,12 +3,11 @@
 {% block head %}
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>42 Coffee Cups Test Assignment - Requests</title>
-
-    <script src="//code.jquery.com/jquery-2.0.3.js" type="text/javascript"></script>
-    <script type="text/javascript" src="//tablesorter.ru/jquery.tablesorter.min.js"></script>
     {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
     {% load inplace_edit %}
     {% inplace_static %}
+    <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/tablesorter.js' %}"></script>
 {% endblock head %}
 
