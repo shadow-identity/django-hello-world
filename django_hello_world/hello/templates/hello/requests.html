@@ -5,22 +5,25 @@
     <title>42 Coffee Cups Test Assignment - Requests</title>
     {% load staticfiles %}
     <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
-    {% load inplace_edit %}
-    {% inplace_static %}
+
     <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/tablesorter.js' %}"></script>
 {% endblock head %}
 
 {% block content %}
+{% load inplace_edit %}
+{% inplace_static %}
+<h3>42 Coffee Cups Test Assignment - Requests</h3>
+<b>Click on column header to choose sorting<br>Double click on priority to edit value</b>
 <form method="post" action="">
-    <table id="reqTable" class="tablesorter">
-        <thead>
+    <table id="reqTable" class="tablesorter" border="1" cellspacing="1">
+        <thead bgcolor="silver">
             <tr>
-                <th>date</th>
-                <th>user</th>
-                <th>url</th>
-                <th>method</th>
-                <th>priority</th>
+                <th width="200px">Date and time</th>
+                <th width="40px">User</th>
+                <th>URI</th>
+                <th width="40px">Method</th>
+                <th width="40px">Priority</th>
             </tr>
         </thead>
         <tbody valign="top">
