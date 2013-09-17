@@ -33,7 +33,8 @@ class HelloTest(TestCase):
 
     def test_hello(self):
         response = self.c.get(reverse('home'))
-        self.assertContains(response, 'Pavel', status_code=200)
+        surname_from_db = Contact.objects.get(id=1).surname
+        self.assertContains(response, surname_from_db, status_code=200)
 
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
@@ -112,7 +113,7 @@ class HelloTest(TestCase):
         """ Test that we are saving state of records correctly
         """
         tst_msg = 'created'
-        record = Requests(req=tst_msg) # Creating record
+        record = Requests(req=tst_msg)  # Creating record
         record.save()
         last_instance = State.objects.latest('pk')
         self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
