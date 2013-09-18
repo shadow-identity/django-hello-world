@@ -7,10 +7,13 @@ activate: ../requirements.txt
 dump:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata hello.Contact auth.User --indent 4 > hello/fixtures/initial_data.json
 
+full_dump:
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata --indent 4 > hello/fixtures/initial_data.json
+
 full_test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test
 
-test: dump
+test: full_dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test hello
 
 shell:
@@ -24,5 +27,6 @@ south:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello
 
 makedb:
+	rm hello.sqlite3
 	-. ~/progs/venv/django-hello-world/bin/activate; python manage.py syncdb --noinput
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello

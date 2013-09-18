@@ -52,13 +52,6 @@ class HelloTest(TestCase):
             text = record.req
         self.assertTrue(response.content, text)
 
-    def test_limit_requests(self):
-        """ Test that we limit Requests table by 15 records
-        """
-        for i in range(0, 15):
-            self.c.get('/')
-        self.assertTrue(Requests.objects.count() <= 15)
-
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
         """
