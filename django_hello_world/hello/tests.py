@@ -32,21 +32,21 @@ class HelloTest(TestCase):
                            'bio': 'd'}
 
     def test_hello(self):
-        response = self.c.get(reverse('home'))
+        response = self.client.get(reverse('home'))
         surname_from_db = Contact.objects.get(id=1).surname
         self.assertContains(response, surname_from_db, status_code=200)
 
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
         """
-        self.c.post('/', {'random': self.rnd})
+        self.client.post('/', {'random': self.rnd})
         data_from_db = Requests.objects.reverse()[0].req
         self.assertTrue(self.rnd in data_from_db)
 
     def test_last_10_records_show(self):
         """ Test that we get 10 last records with requests on /requests page
         """
-        response = self.c.post(reverse('requests'))
+        response = self.client.post(reverse('requests'))
         text = ''
         for record in Requests.objects.reverse()[:10]:
             text = record.req
@@ -55,7 +55,7 @@ class HelloTest(TestCase):
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
         """
-        response = self.c.post(reverse('form'), self.valid_form, follow=True)
+        response = self.client.post(reverse('form'), self.valid_form, follow=True)
         self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # not in base
         self.assertEqual(response.redirect_chain[0][1], 302)  # it was redirect
         self.assertEqual(response.status_code, 200)  # and it was ok
@@ -64,30 +64,30 @@ class HelloTest(TestCase):
     def test_login_and_save_correct(self):
         """ Test that correct data saved and redirect to Success page
         """
-        self.c.login(username='admin', password='admin')
-        response = self.c.post(reverse('form'), self.valid_form, follow=True)
+        self.client.login(username='admin', password='admin')
+        response = self.client.post(reverse('form'), self.valid_form, follow=True)
         self.assertTrue(Contact.objects.filter(name=self.rnd).exists())  # rnd in base
         self.assertContains(response, 'Success')
 
     def test_login_and_save_invalid(self):
         """ Test that incorrect data don't saved and reported to user """
-        self.c.login(username='admin', password='admin')
+        self.client.login(username='admin', password='admin')
         self.valid_form['email'] = 'blablabla'
-        response = self.c.post(reverse('form'), self.valid_form)
+        response = self.client.post(reverse('form'), self.valid_form)
         self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
         self.assertContains(response, 'Enter a valid email address.')
 
     def test_save_empty(self):
         """ Test that empty data field don't saved and reported to user """
-        self.c.login(username='admin', password='admin')
+        self.client.login(username='admin', password='admin')
         self.valid_form['email'] = ''
-        response = self.c.post(reverse('form'), self.valid_form)
+        response = self.client.post(reverse('form'), self.valid_form)
         self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
         self.assertContains(response, 'This field is required')
 
     def test_tag_edit_link(self):
         """ Test that tag 'edit_link' works properly """
-        response = self.c.get('/')
+        response = self.client.get('/')
         example = '/admin/hello/contact/1/">(admin)</a>'
         self.assertContains(response, example, status_code=200)
 
