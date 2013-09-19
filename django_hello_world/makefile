@@ -8,7 +8,7 @@ dump:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata hello.Contact auth.User --indent 4 > hello/fixtures/initial_data.json
 
 full_dump:
-	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata --indent 4 > hello/fixtures/initial_data.json
+	. ~/progs/venv/django-hello-world/bin/activate; python manage.py dumpdata --indent 4 > hello/fixtures/full_dump.json
 
 full_test: dump
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py test

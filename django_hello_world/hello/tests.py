@@ -12,7 +12,7 @@ from django.test.client import RequestFactory
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 from django.contrib.contenttypes.models import ContentType
 
-hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
+hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'full_dump.json')]
 
 
 class HelloTest(TestCase):
