@@ -3,13 +3,13 @@
 {% block content %}
 {% load static %}
 {% load hello_extras %}
-<table width="800" cellspacing="10" cols="4">
-    <tbody valign="top">
+<table class="contact_table">
+    <tbody>
         <tr>
             <td colspan="2">
                 <h3>42 Coffee Cups Test Assignment</h3>
             </td>
-            <td align="right" colspan="2" valign="middle">
+            <td id="edit_links" colspan="2">
                 {% if user.is_authenticated %}
                     <a href="{% url 'form' %}">Edit</a>
                 {% else %}
@@ -19,40 +19,41 @@
             </td>
         </tr>
         <tr>
-            <td width="15%">Name</td>
-            <td width="35%">{{ record.name }}</td>
+            <td class="key">Name</td>
+            <td class="value">{{ record.name }}</td>
             <td colspan="2">Contacts</td>
         </tr>
         <tr>
-            <td>Last Name</td>
-            <td>{{ record.surname }}</td>
-            <td width="10px">Email</td>
-            <td>{{ record.email }}</td>
+            <td class="key">Last Name</td>
+            <td class="value">{{ record.surname }}</td>
+            <td class="key">Email</td>
+            <td class="value">{{ record.email }}</td>
         </tr>
         <tr>
-            <td rowspan="2">Date of birth</td>
-            <td rowspan="2">{{ record.date_of_birth}}</td>
-            <td>Jabber</td><td>{{ record.jabber }}</td>
+            <td rowspan="2" class="key">Date of birth</td>
+            <td rowspan="2" class="value">{{ record.date_of_birth}}</td>
+            <td class="key">Jabber</td>
+            <td class="value">{{ record.jabber }}</td>
         </tr>
         <tr>
-            <td>Skype</td>
-            <td>{{ record.skype }}</td>
+            <td class="key">Skype</td>
+            <td class="value">{{ record.skype }}</td>
         </tr>
         <tr>
-            <td rowspan="4" colspan="2">Photo:
+            <td rowspan="4" colspan="2" class="key">Photo:
                 <br>
-                <img src="{{ record.photo.url }}" width="80%">
+                <img src="{{ record.photo.url }}">
             </td>
-            <td>Other contacts:</td>
+            <td class="key">Other contacts:</td>
         </tr>
         <tr>
-            <td colspan="2">{{ record.other_contacts }}</td>
+            <td colspan="2" class="value">{{ record.other_contacts }}</td>
         </tr>
         <tr>
-            <td colspan="2">Bio:</td>
+            <td colspan="2" class="key">Bio:</td>
         </tr>
         <tr>
-            <td colspan="2">{{ record.bio }}</td>
+            <td colspan="2" class="value">{{ record.bio }}</td>
         </tr>
     </tbody>
 </table>

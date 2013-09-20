@@ -4,45 +4,45 @@
     {% csrf_token %}
     {{ form.non_field_errors }}
     <div id="maskwrapper">
-        <table width="800" cellspacing="10" cols="4">
-            <tbody valign="top">
-            <tr><td align="right" width="10px" width="50px">Name:</td>
-                <td width="35%"><div class="fieldWrapper">
-                    {{ form.name.errors }}
-                    {{ form.name }} </div></td>
-                <td width="10px" align="right">Email:</td>
-                <td width="35%"><div class="fieldWrapper">
-                    {{ form.email.errors }}
-                    {{ form.email }} </div></td></tr>
-            <tr><td align="right">Last Name:</td>
-                <td><div class="fieldWrapper">
-                    {{ form.surname.errors }}
-                    {{ form.surname }} </div></td>
-                <td width="10px" align="right">Jabber:</td>
-                <td><div class="fieldWrapper">
-                    {{ form.jabber.errors }}
-                    {{ form.jabber }} </div></td></tr>
-            <tr><td align="right">Date of birth:</td>
-                <td><div class="fieldWrapper">
-                    {{ form.date_of_birth.errors }}
-                    {{ form.date_of_birth }} </div></td>
-                <td align="right">Skype:</td>
-                <td><div class="fieldWrapper">
-                    {{ form.skype.errors }}
-                    {{ form.skype }} </div></td>
-            <tr><td rowspan="1" align="right">Photo:</td>
-                <td rowspan="1"><div class="fieldWrapper">
-                    {{ form.photo.errors }}
-                    {{ form.photo }} </div></td>
-                <td colspan="2" valign="bottom">Other contacts:</td></tr>
-            <tr><td rowspan="4" colspan="2"><img src="{{ photo.url }}" width="90%"></td>
-                <td colspan="2"><div class="fieldWrapper">
-                    {{ form.other_contacts.errors }}
-                    {{ form.other_contacts }} </div></td></tr>
-            <tr><td colspan="2">Bio:</td>
-            <tr><td colspan="2"><div class="fieldWrapper">
-                {{ form.bio.errors }}
-                {{ form.bio }} </div></td></tr>
+        <table class="contact_table">
+            <tbody>
+                <tr><td class="form_key">Name:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.name.errors }}
+                        {{ form.name }} </div></td>
+                    <td class="form_key">Email:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.email.errors }}
+                        {{ form.email }} </div></td></tr>
+                <tr><td class="form_key">Last Name:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.surname.errors }}
+                        {{ form.surname }} </div></td>
+                    <td class="form_key">Jabber:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.jabber.errors }}
+                        {{ form.jabber }} </div></td></tr>
+                <tr><td class="form_key">Date of birth:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.date_of_birth.errors }}
+                        {{ form.date_of_birth }} </div></td>
+                    <td class="form_key">Skype:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.skype.errors }}
+                        {{ form.skype }} </div></td>
+                <tr><td class="form_key">Photo:</td>
+                    <td class="value"><div class="fieldWrapper">
+                        {{ form.photo.errors }}
+                        {{ form.photo }} </div></td>
+                    <td colspan="2" valign="bottom">Other contacts:</td></tr>
+                <tr><td rowspan="4" colspan="2"><img src="{{ photo.url }}"></td>
+                    <td colspan="2"><div class="fieldWrapper">
+                        {{ form.other_contacts.errors }}
+                        {{ form.other_contacts }} </div></td></tr>
+                <tr><td colspan="2">Bio:</td>
+                <tr><td colspan="2"><div class="fieldWrapper">
+                    {{ form.bio.errors }}
+                    {{ form.bio }} </div></td></tr>
             </tbody>
         </table>
         <p>

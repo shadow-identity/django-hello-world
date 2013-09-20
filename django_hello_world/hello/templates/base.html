@@ -2,6 +2,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
+        {% load staticfiles %}
+        <link href="{% static 'css/hello.css' %}" rel="stylesheet" type="text/css" />
         {% block head %}
             <title>Django-hello-world</title>
         {% endblock head %}

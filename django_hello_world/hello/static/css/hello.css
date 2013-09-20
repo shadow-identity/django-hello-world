@@ -1,3 +1,49 @@
 .errorlist {
     color: #ff0000;
 }
+
+.contact_table {
+    width: 800px;
+    cellspacing: 10px;
+    cols: 4;
+}
+
+tbody {
+    valign: top;
+}
+
+img {
+    width: 90%;
+}
+
+.form_key {
+    text-align: right;
+    width: 100px;
+}
+
+.key {
+    width: 100px;
+    vertical-align: top;
+}
+
+.value {
+    width: 300px;
+    vertical-align: top;
+}
+
+.splitted_cell {
+    colspan: 2;
+}
+
+#edit_links {
+    align: right;
+    valign: middle;
+}
+
+#reqTable_length, #reqTable_filter, #reqTable_info, #reqTable_paginate{
+    visibility: hidden;
+}
+
+.request_date {
+    width: 180px
+}

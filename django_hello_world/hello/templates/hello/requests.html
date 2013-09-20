@@ -8,6 +8,10 @@
 
     <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/tablesorter.js' %}"></script>
+
+    {% load staticfiles %}
+    <link href="{% static 'css/demo_table.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/demo_page.css' %}" rel="stylesheet" type="text/css" />
 {% endblock head %}
 
 {% block content %}
@@ -16,20 +20,20 @@
 <h3>42 Coffee Cups Test Assignment - Requests</h3>
 <b>Click on column header to choose sorting<br>Double click on priority to edit value</b>
 <form method="post" action="">
-    <table id="reqTable" class="tablesorter" border="1" cellspacing="1">
-        <thead bgcolor="silver">
+    <table id="reqTable" >
+        <thead>
             <tr>
-                <th width="200px">Date and time</th>
-                <th width="40px">User</th>
+                <th>Date and time</th>
+                <th>User</th>
                 <th>URI</th>
-                <th width="40px">Method</th>
-                <th width="40px">Priority</th>
+                <th>Method</th>
+                <th>Priority</th>
             </tr>
         </thead>
-        <tbody valign="top">
+        <tbody>
         {% for req in requests %}
             <tr>
-                <td>{{ req.datetime }}</td>
+                <td class="request_date">{{ req.datetime }}</td>
                 <td>{{ req.user }}</td>
                 <td>{{ req.url }}</td>
                 <td>{{ req.method }}</td>
