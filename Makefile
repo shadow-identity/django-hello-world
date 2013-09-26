@@ -7,6 +7,7 @@ test:
 	cd django_hello_world; PYTHONPATH=`pwd` python manage.py test hello
 
 run:
+    cd django_hello_world; PYTHONPATH=`pwd` python manage.py migrate hello
 	cd django_hello_world; PYTHONPATH=`pwd` python manage.py runserver
 
 syncdb:
