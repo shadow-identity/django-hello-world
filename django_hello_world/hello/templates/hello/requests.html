@@ -10,17 +10,15 @@
     <script type="text/javascript" src="{% static 'js/tablesorter.js' %}"></script>
 
     {% load staticfiles %}
-    <link href="{% static 'css/demo_table.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/demo_table.css' %}" rel="stylesheet" type="text/css"/>
 {% endblock head %}
 
 {% block content %}
-{% load inplace_edit %}
-{% inplace_static %}
-<h3>42 Coffee Cups Test Assignment - Requests</h3>
-<b>Click on column header to choose sorting<br>Click on "+" or "-" to change priority</b>
-<form method="post" action="">
-    <table id="reqTable" >
-        <thead>
+    <h3>42 Coffee Cups Test Assignment - Requests</h3>
+    <b>Click on column header to choose sorting<br>Click on "+" or "-" to change priority</b>
+    <form method="post" action="">
+        <table id="reqTable">
+            <thead>
             <tr>
                 <th>Date and time</th>
                 <th>User</th>
@@ -28,24 +26,23 @@
                 <th>Method</th>
                 <th>Priority</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for req in requests %}
-            <tr>
-                <td class="request_date">{{ req.datetime }}</td>
-                <td>{{ req.user }}</td>
-                <td>{{ req.url }}</td>
-                <td>{{ req.method }}</td>
-                {% comment %}<td>{% inplace_edit "req.priority" %}</td>{% endcomment %}
-                <td>
-                    <a class="decrease_priority" href="{% url "decrease_priority" req.id %}">-</a>
-                    {{ req.priority }}
-                    <a class="increase_priority" href="{% url "increase_priority" req.id %}">+</a>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</form>
+            </thead>
+            <tbody>
+            {% for req in requests %}
+                <tr>
+                    <td class="request_date">{{ req.datetime }}</td>
+                    <td>{{ req.user }}</td>
+                    <td>{{ req.url }}</td>
+                    <td>{{ req.method }}</td>
+                    <td>
+                        <a class="decrease_priority" href="{% url "decrease_priority" req.id %}">-</a>
+                        {{ req.priority }}
+                        <a class="increase_priority" href="{% url "increase_priority" req.id %}">+</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </form>
 
 {% endblock %}

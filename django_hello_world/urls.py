@@ -1,8 +1,10 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django_hello_world.settings import MEDIA_ROOT
 from django.contrib import admin
 from django.views.generic import TemplateView
+
+from django_hello_world.settings import MEDIA_ROOT
+
 
 admin.autodiscover()
 
@@ -30,7 +32,6 @@ urlpatterns = patterns('',
     url(r'^decrease_priority/(\d+)/$', 'django_hello_world.hello.views.decrease_priority', name='decrease_priority'),
     url(r'^increase_priority/(\d+)/$', 'django_hello_world.hello.views.increase_priority', name='increase_priority'),
 
-    (r'^inplaceeditform/', include('inplaceeditform.urls')),
     (r'^jsi18n$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )
 

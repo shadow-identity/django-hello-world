@@ -1,14 +1,14 @@
 from annoying.decorators import render_to
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from django_hello_world.hello.models import Requests, Contact
-from django_hello_world.hello.forms import ContactForm
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.conf import settings
 from django.core.urlresolvers import reverse
-from django.forms.models import modelformset_factory
+
+from django_hello_world.hello.models import Requests, Contact
+from django_hello_world.hello.forms import ContactForm
 
 
 @render_to('hello/home.html')
@@ -28,7 +28,6 @@ def requests(request):
 
 
 @login_required
-#@render_to('hello/form.html')
 def form(request):
     if request.is_ajax():
         template = 'hello/form.html'
