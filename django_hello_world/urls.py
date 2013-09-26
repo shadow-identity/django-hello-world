@@ -27,6 +27,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
+    url(r'^decrease_priority/(\d+)/$', 'django_hello_world.hello.views.decrease_priority', name='decrease_priority'),
+    url(r'^increase_priority/(\d+)/$', 'django_hello_world.hello.views.increase_priority', name='increase_priority'),
+
     (r'^inplaceeditform/', include('inplaceeditform.urls')),
     (r'^jsi18n$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )

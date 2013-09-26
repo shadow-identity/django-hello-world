@@ -15,15 +15,18 @@ class ContactForm(ModelForm):
         }
 
 
-class CustomRequestsForm(ModelForm):
-    url = forms.URLField()
-    datetime = forms.DateTimeField()
-    method = forms.CharField()
-    user = forms.CharField()
+#class RequestsForm(ModelForm):
 
-    class Meta(object):
-        model = Requests
-        fields = ['url', 'priority', 'datetime', 'method', 'user']
+
+#class CustomRequestsForm(ModelForm):
+#    url = forms.URLField()
+#    datetime = forms.DateTimeField()
+#    method = forms.CharField()
+#    user = forms.CharField()
+#
+#    class Meta(object):
+#        model = Requests
+#        fields = ['url', 'priority', 'datetime', 'method', 'user']
 
 
 

@@ -27,6 +27,6 @@ south:
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello
 
 makedb:
-	rm hello.sqlite3
+	-rm hello.sqlite3
 	-. ~/progs/venv/django-hello-world/bin/activate; python manage.py syncdb --noinput
 	. ~/progs/venv/django-hello-world/bin/activate; python manage.py migrate hello

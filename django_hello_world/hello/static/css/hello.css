@@ -47,3 +47,13 @@ img {
 .request_date {
     width: 180px
 }
+
+.decrease_priority {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.increase_priority {
+    font-weight: bold;
+    color: darkred;
+}

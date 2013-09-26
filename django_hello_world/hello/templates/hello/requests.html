@@ -17,7 +17,7 @@
 {% load inplace_edit %}
 {% inplace_static %}
 <h3>42 Coffee Cups Test Assignment - Requests</h3>
-<b>Click on column header to choose sorting<br>Double click on priority to edit value</b>
+<b>Click on column header to choose sorting<br>Click on "+" or "-" to change priority</b>
 <form method="post" action="">
     <table id="reqTable" >
         <thead>
@@ -36,7 +36,12 @@
                 <td>{{ req.user }}</td>
                 <td>{{ req.url }}</td>
                 <td>{{ req.method }}</td>
-                <td>{% inplace_edit "req.priority" %}</td>
+                {% comment %}<td>{% inplace_edit "req.priority" %}</td>{% endcomment %}
+                <td>
+                    <a class="decrease_priority" href="{% url "decrease_priority" req.id %}">-</a>
+                    {{ req.priority }}
+                    <a class="increase_priority" href="{% url "increase_priority" req.id %}">+</a>
+                </td>
             </tr>
         {% endfor %}
         </tbody>

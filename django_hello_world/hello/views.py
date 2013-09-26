@@ -2,11 +2,12 @@ from annoying.decorators import render_to
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django_hello_world.hello.models import Requests, Contact
-from django_hello_world.hello.forms import ContactForm, CustomRequestsForm
+from django_hello_world.hello.forms import ContactForm
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.forms.models import modelformset_factory
 
 
@@ -42,10 +43,10 @@ def form(request):
                 if getattr(settings, 'DEBUG', False):  # only if DEBUG=True
                     import time
                     time.sleep(2)  # delay AJAX response for x seconds
-                return HttpResponseRedirect('/success/')
+                return HttpResponseRedirect(reverse('contact_success'))
 
             else:
-                return HttpResponseRedirect('/success/')
+                return HttpResponseRedirect(reverse('contact_success'))
 
     return render(request, template, {
         'form': form, 'photo': Contact.objects.get(pk=1).photo
@@ -54,3 +55,17 @@ def form(request):
 
 def login(request):
     return render_to_response('login.html')
+
+
+def decrease_priority(request, record):
+    req = Requests.objects.get(id=record)
+    req.priority -= 1
+    req.save()
+    return HttpResponseRedirect(reverse('requests'))
+
+
+def increase_priority(request, record):
+    req = Requests.objects.get(id=record)
+    req.priority += 1
+    req.save()
+    return HttpResponseRedirect(reverse('requests'))
