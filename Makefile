@@ -11,5 +11,6 @@ run:
 	cd django_hello_world; PYTHONPATH=`pwd` python manage.py runserver
 
 syncdb:
+	-rm hello.sqlite3
 	-cd django_hello_world; PYTHONPATH=`pwd` python manage.py syncdb --noinput
 	cd django_hello_world; PYTHONPATH=`pwd` python manage.py migrate hello
