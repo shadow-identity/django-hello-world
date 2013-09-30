@@ -3,7 +3,7 @@ MANAGE=django-admin.py
 
 test:
 	ls django_hello_world/hello/fixtures
-	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) dumpdata --indent 4 > django_hello_world/hello/fixtures/full_dump.json
+	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) dumpdata --indent=4 --database=hello.sqlite3 > django_hello_world/hello/fixtures/full_dump.json
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) test hello
 
 run:
