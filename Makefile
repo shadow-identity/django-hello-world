@@ -7,7 +7,7 @@ test:
 	ls django_hello_world/hello
 	ls django_hello_world/hello/fixtures
 
-	cd .. ; PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) dumpdata --indent 4 > hello/fixtures/full_dump.json
+	cd .. ; PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) dumpdata --indent 4 > django_hello_world/hello/fixtures/full_dump.json
 	cd .. ; PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=django_hello_world.settings $(MANAGE) test hello
 
 run:
