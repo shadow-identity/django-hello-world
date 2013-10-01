@@ -10,7 +10,7 @@ sys.path.insert(0, PROJECT_ROOT)
 
 db_path = os.path.abspath(os.path.join(PROJECT_ROOT, os.path.join('..', 'hello.sqlite3')))
 sys.stderr.write('db_path: ' + db_path + '\n')
-sys.stderr.write('db_path: ' + db_path + '\n')
+#sys.stderr.write('db_path: ' + db_path + '\n')
 
 
 DEBUG = True
@@ -33,7 +33,7 @@ DATABASES = {
         'PORT': '',  # Set to empty string for default. Not used with sqlite3.
     }
 }
-
+sys.stderr.write('set up db\n')
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.

@@ -1,6 +1,7 @@
 MANAGE=django-admin.py
 
 test:
+	tree
 	ls django_hello_world/hello/fixtures
 	ls -d $(PWD)
 
