@@ -10,7 +10,6 @@ sys.path.insert(0, PROJECT_ROOT)
 
 db_path = os.path.abspath(os.path.join(PROJECT_ROOT, os.path.join('..', 'hello.sqlite3')))
 sys.stderr.write('db_path: ' + db_path + '\n')
-#sys.stderr.write('db_path: ' + db_path + '\n')
 
 
 DEBUG = True
