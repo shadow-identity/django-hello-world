@@ -13,7 +13,7 @@ from django_hello_world.hello.context_processors import django_settings, get_set
 from django.contrib.contenttypes.models import ContentType
 
 hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'full_dump.json')]
-print hello_fixtures_file
+print 'fixture:', hello_fixtures_file
 
 class HelloTest(TestCase):
     fixtures = hello_fixtures_file
