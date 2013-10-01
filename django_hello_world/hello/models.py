@@ -12,6 +12,8 @@ class Contact(models.Model):
     other_contacts = models.TextField(default='')
     photo = models.ImageField(upload_to='photos')
 
+    def __unicode__(self):
+        return self.name + ' ' + self.surname
 
 class Requests(models.Model):
     req = models.TextField(editable=False)
@@ -21,11 +23,16 @@ class Requests(models.Model):
     user = models.CharField(max_length=50, blank=True, editable=False)
     priority = models.IntegerField(default=1)
 
+    def __unicode__(self):
+        return self.datetime
+
     class Meta():
         ordering = ['id']
-
 
 class State(models.Model):
     model = models.CharField(max_length=200)
     record_id = models.IntegerField()
     state = models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return self.model

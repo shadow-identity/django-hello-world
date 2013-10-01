@@ -1,8 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.core.management import call_command
 from django.test import TestCase
-from django.test.client import Client
-from random import random
 from django_hello_world.hello.models import Requests, Contact, State
 from django_hello_world.settings import rel
 from django.conf import settings
@@ -16,12 +14,12 @@ hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
 print 'fixture:', hello_fixtures_file
 
 
-class HelloTest(TestCase):
+class HelloViewsTest(TestCase):
     fixtures = hello_fixtures_file
 
     def setUp(self):
-        self.rnd = str(random())
-        self.valid_form = {'name': self.rnd,
+        self.somevalue = 'blablabla'
+        self.valid_form = {'name': self.somevalue,
                            'surname': 'b',
                            'email': 'a@c.com',
                            'jabber': 'b@c.com',
@@ -32,16 +30,11 @@ class HelloTest(TestCase):
                            'bio': 'd'}
 
     def test_hello(self):
+        """ Tests that contact information is shown on the home page
+        """
         response = self.client.get(reverse('home'))
         surname_from_db = Contact.objects.get(id=1).surname
         self.assertContains(response, surname_from_db, status_code=200)
-
-    def test_save_request_to_db(self):
-        """ Test that we really save requests to db
-        """
-        self.client.post('/', {'random': self.rnd})
-        data_from_db = Requests.objects.reverse()[0].req
-        self.assertTrue(self.rnd in data_from_db)
 
     def test_last_10_records_show(self):
         """ Test that we get 10 last records with requests on /requests page
@@ -56,7 +49,7 @@ class HelloTest(TestCase):
         """ Test that correct form without authentication = redirect to login page
         """
         response = self.client.post(reverse('form'), self.valid_form, follow=True)
-        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # not in base
+        self.assertFalse(Contact.objects.filter(name=self.somevalue).exists())  # not in base
         self.assertEqual(response.redirect_chain[0][1], 302)  # it was redirect
         self.assertEqual(response.status_code, 200)  # and it was ok
         self.assertTrue(reverse('login') in response.redirect_chain[0][0])  # and to right destination
@@ -66,7 +59,7 @@ class HelloTest(TestCase):
         """
         self.client.login(username='admin', password='admin')
         response = self.client.post(reverse('form'), self.valid_form, follow=True)
-        self.assertTrue(Contact.objects.filter(name=self.rnd).exists())  # rnd in base
+        self.assertTrue(Contact.objects.filter(name=self.somevalue).exists())  # somevalue in base
         self.assertContains(response, 'Success')
 
     def test_login_and_save_invalid(self):
@@ -74,7 +67,7 @@ class HelloTest(TestCase):
         self.client.login(username='admin', password='admin')
         self.valid_form['email'] = 'blablabla'
         response = self.client.post(reverse('form'), self.valid_form)
-        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
+        self.assertFalse(Contact.objects.filter(name=self.somevalue).exists())  # new values don't saved
         self.assertContains(response, 'Enter a valid email address.')
 
     def test_save_empty(self):
@@ -82,25 +75,18 @@ class HelloTest(TestCase):
         self.client.login(username='admin', password='admin')
         self.valid_form['email'] = ''
         response = self.client.post(reverse('form'), self.valid_form)
-        self.assertFalse(Contact.objects.filter(name=self.rnd).exists())  # new values don't saved
+        self.assertFalse(Contact.objects.filter(name=self.somevalue).exists())  # new values don't saved
         self.assertContains(response, 'This field is required')
 
-    def test_tag_edit_link(self):
-        """ Test that tag 'edit_link' works properly """
-        response = self.client.get('/')
-        example = '/admin/hello/contact/1/">(admin)</a>'
-        self.assertContains(response, example, status_code=200)
 
-    def test_django_settings(self):
-        """ Test context processor 'django_settings'
+class HelloDBManipulationsTest(TestCase):
+    def test_save_request_to_db(self):
+        """ Test that we really save requests to db
         """
-        factory = RequestFactory()
-        request = factory.get('/')
-        RequestContext(request, [django_settings])
-
-        settings = get_settings_dict()
-        for setting in settings:
-            self.assertEqual(RequestContext(request).get(setting), settings[setting])
+        test_value = 'sdoifso'
+        self.client.post('/', {'random': test_value})
+        data_from_db = Requests.objects.reverse()[0].req
+        self.assertTrue(test_value in data_from_db)
 
     def test_saving_state(self):
         """ Test that we are saving state of records correctly
@@ -124,7 +110,29 @@ class HelloTest(TestCase):
         self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
                          [unicode(tst_msg), last_pk, unicode(Requests)])
 
+class HelloUtilsTest(TestCase):
+    fixtures = hello_fixtures_file
+
+    def test_tag_edit_link(self):
+        """ Test that tag 'edit_link' works properly """
+        response = self.client.get('/')
+        example = '/admin/hello/contact/1/">(admin)</a>'
+        self.assertContains(response, example, status_code=200)
+
+    def test_django_settings(self):
+        """ Test context processor 'django_settings'
+        """
+        factory = RequestFactory()
+        request = factory.get('/')
+        RequestContext(request, [django_settings])
+
+        settings = get_settings_dict()
+        for setting in settings:
+            self.assertEqual(RequestContext(request).get(setting), settings[setting])
+
     def test_command_show_models_objects(self):
+        """ Tests that commend 'show_models_objects' shows everything that should
+        """
         def compare(command_output):
             """ compare every string in output with all objects
             """
