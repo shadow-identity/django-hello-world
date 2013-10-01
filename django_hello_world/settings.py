@@ -9,7 +9,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, PROJECT_ROOT)
 
 db_path = os.path.abspath(os.path.join(PROJECT_ROOT, os.path.join('..', 'hello.sqlite3')))
-
+print db_path
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
