@@ -42,7 +42,7 @@
         <tr>
             <td rowspan="4" colspan="2" class="key">Photo:
                 <br>
-                <img src="{{ record.photo.url }}">
+                <img src="{{ record.photo.url }} alt="Photo"">
             </td>
             <td class="key">Other contacts:</td>
         </tr>
@@ -57,6 +57,6 @@
         </tr>
     </tbody>
 </table>
-<hr align="left">
+<hr>
 <a href="{% url 'requests' %}">requests</a>
 {% endblock content %}
