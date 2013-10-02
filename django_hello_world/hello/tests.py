@@ -1,14 +1,17 @@
+from StringIO import StringIO
+
 from django.core.urlresolvers import reverse
 from django.core.management import call_command
 from django.test import TestCase
-from django_hello_world.hello.models import Requests, Contact, State
-from django_hello_world.settings import rel
 from django.conf import settings
-from StringIO import StringIO
 from django.template import RequestContext
 from django.test.client import RequestFactory
-from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 from django.contrib.contenttypes.models import ContentType
+
+from django_hello_world.hello.models import Requests, Contact, State
+from django_hello_world.settings import rel
+from django_hello_world.hello.context_processors import django_settings, get_settings_dict
+
 
 hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
 print 'fixture:', hello_fixtures_file
@@ -150,5 +153,5 @@ class HelloUtilsTest(TestCase):
         self.assertEqual(out.getvalue(), err.getvalue())
         self.assertTrue(compare(out))
         # self-test
-        Requests(req='test', priority=1).save()
+        Requests.objects.create(req='test', priority=1)
         self.assertFalse(compare(out))
