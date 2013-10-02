@@ -34,10 +34,10 @@ def form(request):
     else:
         template = 'hello/edit.html'
     item = get_object_or_404(Contact, id=1)
-    form = ContactForm(request.POST or None, request.FILES or None,  instance=item)
+    cform = ContactForm(request.POST or None, request.FILES or None,  instance=item)
     if request.method == 'POST':
-        if form.is_valid():
-            form.save()
+        if cform.is_valid():
+            cform.save()
             if request.is_ajax():
                 if getattr(settings, 'DEBUG', False):  # only if DEBUG=True
                     import time
@@ -48,12 +48,12 @@ def form(request):
                 return HttpResponseRedirect(reverse('contact_success'))
 
     return render(request, template, {
-        'form': form, 'photo': Contact.objects.get(pk=1).photo
+        'form': cform, 'photo': Contact.objects.get(pk=1).photo
     })
 
 
 def login(request):
-    return render_to_response('login.html')
+    return render_to_response('hello/login.html')
 
 
 def decrease_priority(request, record):
