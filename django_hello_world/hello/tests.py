@@ -83,6 +83,8 @@ class HelloViewsTest(TestCase):
 
 
 class HelloDBManipulationsTest(TestCase):
+    fixtures = hello_fixtures_file
+
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
         """
