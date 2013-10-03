@@ -42,9 +42,10 @@ class HelloViewsTest(TestCase):
         """
         response = self.client.post(reverse('requests'))
         text = ''
-        for record in Requests.objects.reverse()[:10]:
-            text = record.req
-        self.assertTrue(response.content, text)
+        #todo: fix it
+        for record in Requests.objects.reverse()[:10]:  # read last 10 Requests:
+            text = record.req  # need to write all 10 last requests from db, mafaka
+        self.assertTrue(response.content, text)  # holy shit!
 
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
