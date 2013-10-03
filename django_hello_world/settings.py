@@ -6,11 +6,7 @@ import os
 def rel(*x):
     return os.path.normpath(os.path.abspath(os.path.join(os.path.dirname(__file__), *x)))
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-sys.path.insert(0, PROJECT_ROOT)
-
-db_path = os.path.abspath(os.path.join(PROJECT_ROOT, os.path.join('..', 'hello.sqlite3')))
-
+sys.path.insert(0, rel())
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -25,7 +21,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': db_path,  # Or path to database file if using sqlite3.
+        'NAME': rel('../hello.sqlite3'),  # Or path to database file if using sqlite3.
     }
 }
 # Local time zone for this installation. Choices can be found here:
