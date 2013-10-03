@@ -13,7 +13,8 @@ from django_hello_world.settings import rel
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
 
 
-hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'initial_data.json')]
+#hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'test_data.json')]
+hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'test_data.json')]
 print 'fixture:', hello_fixtures_file
 
 
