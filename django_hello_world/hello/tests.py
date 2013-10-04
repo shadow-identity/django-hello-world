@@ -95,7 +95,7 @@ class HelloDBManipulationsTest(TestCase):
         """ Test that we really save requests to db
         """
         class MockUser():
-            """ mock class to imitate .user attribute in requests """
+            """ mock class to imitate .user.username attribute in requests """
             def __init__(self):
                 self.username = 'MockUser'
 
