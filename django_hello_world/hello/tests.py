@@ -51,7 +51,6 @@ class HelloViewsTest(TestCase):
             self.assertContains(response, Requests.objects.latest('pk').method)
             self.assertContains(response, Requests.objects.latest('pk').priority)
 
-
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
         """
@@ -149,13 +148,17 @@ class HelloUtilsTest(TestCase):
     def test_django_settings(self):
         """ Test context processor 'django_settings'
         """
-        factory = RequestFactory()
-        request = factory.get('/')
-        RequestContext(request, [django_settings])
 
-        settings = get_settings_dict()
-        for setting in settings:
-            self.assertEqual(RequestContext(request).get(setting), settings[setting])
+        context_processor_settings = django_settings(None)
+        settings_dict = get_settings_dict()
+        for setting in settings_dict:
+            self.assertEqual(context_processor_settings.get(setting), settings_dict.get(setting))
+
+    def test_context_processor_django_settings_in_project_settings(self):
+        """ test that django_settings context processor is in settings.py/TEMPLATE_CONTEXT_PROCESSORS
+        """
+        self.assertTrue('django_hello_world.hello.context_processors.django_settings'
+        in settings.TEMPLATE_CONTEXT_PROCESSORS)
 
     def test_command_show_models_objects(self):
         """ Tests that commend 'show_models_objects' shows everything that should
