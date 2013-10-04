@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 
 register = template.Library()
 
+
 @register.simple_tag(takes_context=True, name='edit_link')
 def get_admin_link(context, record):
     """ create hyperlink to admin edit of record by uid """

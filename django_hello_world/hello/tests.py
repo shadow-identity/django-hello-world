@@ -129,6 +129,7 @@ class HelloDBManipulationsTest(TestCase):
         self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
                          [unicode(tst_msg), last_pk, unicode(Requests)])
 
+
 class HelloUtilsTest(TestCase):
     fixtures = hello_fixtures_file
 
@@ -137,6 +138,13 @@ class HelloUtilsTest(TestCase):
         response = self.client.get('/')
         example = '/admin/hello/contact/1/">(admin)</a>'
         self.assertContains(response, example, status_code=200)
+
+    def test_tag_itself(self):
+        #template = Template('{% load hello_extras %}{% edit_link record %}')
+        #context = Context({'record': Contact.objects.get(pk=1)})
+
+        example = '/admin/hello/contact/1/">(admin)</a>'
+        #self.assertEqual(example, template.render(context))
 
     def test_django_settings(self):
         """ Test context processor 'django_settings'
