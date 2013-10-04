@@ -29,7 +29,7 @@
             <tbody>
             {% for req in requests %}
                 <tr>
-                    <td class="request_date">{{ req.datetime }}</td>
+                    <td class="request_date">{{ req.datetime|date:'Y F d, G:i' }}</td>
                     <td>{{ req.user }}</td>
                     <td>{{ req.url }}</td>
                     <td>{{ req.method }}</td>
