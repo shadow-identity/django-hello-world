@@ -11,6 +11,7 @@ from django.contrib.contenttypes.models import ContentType
 from django_hello_world.hello.models import Requests, Contact, State
 from django_hello_world.settings import rel
 from django_hello_world.hello.context_processors import django_settings, get_settings_dict
+from django_hello_world.hello.middleware import HelloMiddlewares
 
 hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'test_data.json')]
 
@@ -91,8 +92,18 @@ class HelloDBManipulationsTest(TestCase):
     def test_save_request_to_db(self):
         """ Test that we really save requests to db
         """
+        class MockUser():
+            """ mock class to imitate .user attribute in requests """
+            def __init__(self):
+                self.username = 'MockUser'
+
         test_value = 'sdoifso'
-        self.client.post('/', {'random': test_value})
+
+        factory = RequestFactory()
+        request = factory.get(reverse('home'), data={'test': test_value})
+        request.user = MockUser()
+        HelloMiddlewares().process_request(request)
+
         data_from_db = Requests.objects.reverse()[0].req
         self.assertTrue(test_value in data_from_db)
 
