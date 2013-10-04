@@ -14,8 +14,6 @@ from django_hello_world.hello.context_processors import django_settings, get_set
 
 hello_fixtures_file = [rel(settings.FIXTURE_DIRS[0], 'test_data.json')]
 
-print settings.STATIC_ROOT
-print rel()
 
 class HelloViewsTest(TestCase):
     fixtures = hello_fixtures_file
