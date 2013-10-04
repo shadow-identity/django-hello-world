@@ -75,7 +75,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    rel('hello/static')
+    rel('hello/static'),
     #'/home/nedr/progs/django-hello-world/django_hello_world/hello/static',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
