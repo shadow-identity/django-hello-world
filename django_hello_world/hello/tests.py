@@ -42,10 +42,25 @@ class HelloViewsTest(TestCase):
         """
         response = self.client.post(reverse('requests'))
         text = ''
+        print response
         #todo: fix it
         for record in Requests.objects.reverse()[:10]:  # read last 10 Requests:
-            text = record.req  # need to write all 10 last requests from db, mafaka
-        self.assertTrue(response.content, text)  # holy shit!
+            date_and_time = Requests.objects.latest('pk').datetime
+            date_and_time_formatted = (date_and_time.strftime('%b. ') +
+                                       date_and_time.strftime('%d, %Y, ').lstrip('0') +
+                                       date_and_time.strftime('%I:%M  %p').lstrip('0')
+
+            )
+            print date_and_time_formatted
+            print date_and_time.strftime('%c')
+            #import ipdb
+            #ipdb.set_trace()
+            self.assertContains(response, Requests.objects.latest('pk').datetime.strftime('%b, '))
+            self.assertContains(response, Requests.objects.latest('pk').user)
+            self.assertContains(response, Requests.objects.latest('pk').url)
+            self.assertContains(response, Requests.objects.latest('pk').method)
+            self.assertContains(response, Requests.objects.latest('pk').priority)
+
 
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
