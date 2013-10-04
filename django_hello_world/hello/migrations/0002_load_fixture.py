@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from south.v2 import DataMigration
+from django.conf import settings
+from os.path import join
 
 
 class Migration(DataMigration):
@@ -8,7 +10,7 @@ class Migration(DataMigration):
         """ Load initial data
         """
         from django.core.management import call_command
-        call_command("loaddata", "hello/fixtures/test_data.json")
+        call_command("loaddata", join(settings.FIXTURE_DIRS[0], "test_data.json"))
 
     def backwards(self, orm):
         """nothing to perform backward migration"""
