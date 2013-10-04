@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.core.management import call_command
 from django.test import TestCase
 from django.conf import settings
-from django.template import RequestContext
+from django.template import RequestContext, Template, Context
 from django.test.client import RequestFactory
 from django.contrib.contenttypes.models import ContentType
 
@@ -135,16 +135,14 @@ class HelloUtilsTest(TestCase):
 
     def test_tag_edit_link(self):
         """ Test that tag 'edit_link' works properly """
-        response = self.client.get('/')
-        example = '/admin/hello/contact/1/">(admin)</a>'
-        self.assertContains(response, example, status_code=200)
+        template = Template('{% load hello_extras %}{% edit_link record %}')
+        factory = RequestFactory()
+        request = factory.get(reverse('home'))
+        # Send context that contains needed information to tag
+        context = Context(RequestContext(request, {'record': Contact.objects.get(pk=1)}))
 
-    def test_tag_itself(self):
-        #template = Template('{% load hello_extras %}{% edit_link record %}')
-        #context = Context({'record': Contact.objects.get(pk=1)})
-
-        example = '/admin/hello/contact/1/">(admin)</a>'
-        #self.assertEqual(example, template.render(context))
+        example = '/admin/hello/contact/1/'
+        self.assertTrue(example in template.render(context))
 
     def test_django_settings(self):
         """ Test context processor 'django_settings'
