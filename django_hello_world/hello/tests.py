@@ -51,12 +51,17 @@ class HelloViewsTest(TestCase):
             self.assertContains(response, Requests.objects.latest('pk').method)
             self.assertContains(response, Requests.objects.latest('pk').priority)
 
+
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
         """
         response = self.client.post(reverse('form'), self.valid_form, follow=True)
         self.assertFalse(Contact.objects.filter(name=self.somevalue).exists())  # not in base
-        self.assertRedirects(response, reverse('login'), status_code=302, target_status_code=200)
+        self.assertEqual(response.redirect_chain[0][1], 302)  # it was redirect
+        self.assertEqual(response.status_code, 200)  # and it was ok
+        self.assertTrue(reverse('login') in response.redirect_chain[0][0])  # and to right destination
+        self.assertRedirects(response, reverse('login') + '?next=/accounts/profile/', status_code=302,
+                             target_status_code=200)
 
     def test_login_and_save_correct(self):
         """ Test that correct data saved and redirect to Success page
