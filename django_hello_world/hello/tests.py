@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.core.management import call_command
 from django.test import TestCase
 from django.conf import settings
-from django.template import RequestContext
+from django.template import RequestContext, Template, Context
 from django.test.client import RequestFactory
 from django.contrib.contenttypes.models import ContentType
 
@@ -51,7 +51,6 @@ class HelloViewsTest(TestCase):
             self.assertContains(response, Requests.objects.latest('pk').method)
             self.assertContains(response, Requests.objects.latest('pk').priority)
 
-
     def test_not_logged(self):
         """ Test that correct form without authentication = redirect to login page
         """
@@ -60,6 +59,8 @@ class HelloViewsTest(TestCase):
         self.assertEqual(response.redirect_chain[0][1], 302)  # it was redirect
         self.assertEqual(response.status_code, 200)  # and it was ok
         self.assertTrue(reverse('login') in response.redirect_chain[0][0])  # and to right destination
+        self.assertRedirects(response, reverse('login') + '?next=/accounts/profile/', status_code=302,
+                             target_status_code=200)
 
     def test_login_and_save_correct(self):
         """ Test that correct data saved and redirect to Success page
@@ -129,25 +130,35 @@ class HelloDBManipulationsTest(TestCase):
         self.assertEqual([last_instance.state, last_instance.record_id, last_instance.model],
                          [unicode(tst_msg), last_pk, unicode(Requests)])
 
+
 class HelloUtilsTest(TestCase):
     fixtures = hello_fixtures_file
 
     def test_tag_edit_link(self):
         """ Test that tag 'edit_link' works properly """
-        response = self.client.get('/')
-        example = '/admin/hello/contact/1/">(admin)</a>'
-        self.assertContains(response, example, status_code=200)
+        template = Template('{% load hello_extras %}{% edit_link record %}')
+        factory = RequestFactory()
+        request = factory.get(reverse('home'))
+        # Send context that contains needed information to tag
+        context = Context(RequestContext(request, {'record': Contact.objects.get(pk=1)}))
+
+        example = '/admin/hello/contact/1/'
+        self.assertTrue(example in template.render(context))
 
     def test_django_settings(self):
         """ Test context processor 'django_settings'
         """
-        factory = RequestFactory()
-        request = factory.get('/')
-        RequestContext(request, [django_settings])
 
-        settings = get_settings_dict()
-        for setting in settings:
-            self.assertEqual(RequestContext(request).get(setting), settings[setting])
+        context_processor_settings = django_settings(None)
+        settings_dict = get_settings_dict()
+        for setting in settings_dict:
+            self.assertEqual(context_processor_settings.get(setting), settings_dict.get(setting))
+
+    def test_context_processor_django_settings_in_project_settings(self):
+        """ test that django_settings context processor is in settings.py/TEMPLATE_CONTEXT_PROCESSORS
+        """
+        self.assertTrue('django_hello_world.hello.context_processors.django_settings'
+        in settings.TEMPLATE_CONTEXT_PROCESSORS)
 
     def test_command_show_models_objects(self):
         """ Tests that commend 'show_models_objects' shows everything that should
